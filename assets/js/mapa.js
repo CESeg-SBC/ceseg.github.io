@@ -45,6 +45,24 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
     });
   }
+  // Render a free-text field that may embed a URL as clickable HTML. When the
+  // text is "Label (https://url)" the label itself becomes the link; otherwise
+  // any inline URL is linkified. Every non-URL segment is escaped (XSS-safe).
+  function linkify(text) {
+    text = text || '';
+    var wrap = text.match(/^(.*\S)\s*\((https?:\/\/[^\s()]+)\)\s*$/);
+    if (wrap) {
+      return '<a href="' + esc(wrap[2]) + '" target="_blank" rel="noopener">' +
+        esc(wrap[1]) + '</a>';
+    }
+    var out = '', last = 0, re = /https?:\/\/[^\s)]+/g, m;
+    while ((m = re.exec(text))) {
+      out += esc(text.slice(last, m.index)) +
+        '<a href="' + esc(m[0]) + '" target="_blank" rel="noopener">' + esc(m[0]) + '</a>';
+      last = m.index + m[0].length;
+    }
+    return out + esc(text.slice(last));
+  }
 
   var DATA = null, RECORDS = [], MARKERS = {}, map, cluster;
   var STATS = null, pubsLayer = null, toolsLayer = null;
@@ -156,7 +174,10 @@
     });
     // Legacy single group link, kept for records without the enriched groups array.
     if (links.group && !(r.groups && r.groups.length)) row('map.researchGroup', 'Research group', links.group, true);
-    if (links.program) row('map.program', 'Graduate program', links.program);
+    if (links.program) {
+      rows += '<div class="cm-d-row"><span>' + esc(tr('map.program', 'Graduate program')) +
+        '</span><div>' + linkify(links.program) + '</div></div>';
+    }
     if (links.url) row('map.website', 'Website', links.url, true);
     return '<div class="cm-detail">'
       + '<span class="cm-tag" style="background:' + TYPES[r.type].color + '">' + esc(typeLabel(r.type)) + '</span>'
