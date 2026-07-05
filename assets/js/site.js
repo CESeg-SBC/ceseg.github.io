@@ -1,3 +1,20 @@
+// ---- Site analytics (Google Analytics 4) ----
+// Informe aqui o Measurement ID da propriedade GA4 (formato "G-XXXXXXXXXX").
+// Com o valor vazio a coleta fica desativada (ex.: durante o desenvolvimento).
+const GA_MEASUREMENT_ID = '';
+(function initAnalytics(){
+  if(!/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) return;             // ID ausente ou placeholder
+  if(['localhost','127.0.0.1'].includes(location.hostname)) return; // não medir dev local
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_MEASUREMENT_ID);
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
+})();
+
 // ---- Navigation model (label keys resolved via i18n) ----
 const NAV = [
   {key:'nav.home', href:'index.html'},

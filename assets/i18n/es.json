@@ -306,8 +306,8 @@
     "desc": "Mapa interactivo de la investigación brasileña en ciberseguridad: investigadores, grupos, programas y centros.",
     "eyebrow": "Comunidad · ciberseguridad en Brasil",
     "h1": "Comunidad de Ciberseguridad en Brasil",
-    "lead": "Investigadores, grupos de investigación, programas de posgrado y centros de I+D en ciberseguridad en Brasil. Busque por nombre, institución, estado o tema.",
-    "searchPlaceholder": "Buscar por nombre, institución, estado o tema...",
+    "lead": "Investigadores, grupos de investigación, grupos CNPq y programas de posgrado en ciberseguridad en Brasil. Busque por nombre, institución, estado, tema o línea de investigación.",
+    "searchPlaceholder": "Buscar por nombre, institución, estado, tema o línea de investigación…",
     "clear": "Limpiar",
     "of": "de",
     "results": "resultados",
@@ -330,8 +330,6 @@
     "typeResearcher": "Investigadores",
     "typeGroup": "Grupos de Investigación",
     "typeProgram": "Programas de Posgrado",
-    "typeCenter": "Centros de I+D",
-    "typeWorkingGroup": "Grupos de Trabajo",
     "typePublication": "Publicaciones",
     "typeTool": "Herramientas",
     "pubsCount": "publicaciones (SBSeg)",
@@ -347,7 +345,21 @@
     "lattes": "Lattes",
     "researchGroup": "Grupo de investigación",
     "program": "Programa de posgrado",
-    "website": "Sitio web"
+    "website": "Sitio web",
+    "scholar": "Google Scholar",
+    "education": "Formación académica",
+    "cnpqGroup": "Grupo CNPq",
+    "groupLines": "Líneas de investigación",
+    "groupSite": "sitio",
+    "groupLeaderRole": "líder",
+    "typeCnpqGroup": "Grupos CNPq",
+    "allLines": "Todas las líneas de investigación",
+    "members": "Investigadores"
+  },
+  "cnpq": {
+    "eyebrow": "Directorio de Grupos de Investigación · CNPq",
+    "h2": "Grupos de investigación CNPq y líneas de investigación",
+    "intro": "Relación de los grupos de investigación del Directorio de Grupos de Investigación de Brasil (DGP/CNPq) vinculados a los investigadores del mapa, con sus respectivas líneas de investigación."
   },
   "mapForm": {
     "eyebrow": "Participe",

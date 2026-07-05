@@ -11,13 +11,12 @@
   var TYPES = {
     researcher:    { color: '#2563eb', key: 'map.typeResearcher',   def: 'Researchers' },
     group:         { color: '#16a34a', key: 'map.typeGroup',        def: 'Research Groups' },
+    cnpq_group:    { color: '#0284c7', key: 'map.typeCnpqGroup',    def: 'CNPq Groups' },
     program:       { color: '#9333ea', key: 'map.typeProgram',      def: 'Graduate Programs' },
-    center:        { color: '#ea580c', key: 'map.typeCenter',       def: 'R&D Centers' },
-    working_group: { color: '#0d9488', key: 'map.typeWorkingGroup', def: 'Working Groups' },
     publication:   { color: '#64748b', key: 'map.typePublication',  def: 'Publications' }
   };
   // Cluster entity types (publication is now an aggregated overlay, not a cluster type).
-  var TYPE_ORDER = ['researcher', 'group', 'program', 'center', 'working_group'];
+  var TYPE_ORDER = ['researcher', 'group', 'cnpq_group', 'program'];
   // Ordered two-row filter strip: type chips filter the cluster; overlay chips
   // toggle their own Leaflet layer. Rendered four-per-row by CSS.
   var TOOL_COLOR = '#c026d3';
@@ -26,9 +25,8 @@
     { kind: 'overlay', layer: 'sbseg', labelKey: 'map.sbsegToggle',      def: 'SBSeg editions',   color: '#1e3a5f' },
     { kind: 'type',    type: 'researcher',    labelKey: 'map.typeResearcher',   def: 'Researchers',      color: TYPES.researcher.color },
     { kind: 'type',    type: 'group',         labelKey: 'map.typeGroup',        def: 'Research Groups',  color: TYPES.group.color },
+    { kind: 'type',    type: 'cnpq_group',    labelKey: 'map.typeCnpqGroup',    def: 'CNPq Groups',      color: TYPES.cnpq_group.color },
     { kind: 'type',    type: 'program',       labelKey: 'map.typeProgram',      def: 'Graduate Programs',color: TYPES.program.color },
-    { kind: 'type',    type: 'center',        labelKey: 'map.typeCenter',       def: 'R&D Centers',      color: TYPES.center.color },
-    { kind: 'type',    type: 'working_group', labelKey: 'map.typeWorkingGroup', def: 'Working Groups',   color: TYPES.working_group.color },
     { kind: 'overlay', layer: 'tools', labelKey: 'map.typeTool',         def: 'Tools',            color: TOOL_COLOR }
   ];
   var LIST_CAP = 400; // cap rendered cards; the map still shows every match.
@@ -52,10 +50,10 @@
   var STATS = null, pubsLayer = null, toolsLayer = null;
   // Cluster entity types, all active by default. Publications and tools are not
   // cluster types: they are aggregated per-institution overlays (see overlayOn).
-  var activeTypes = { researcher: true, group: true, program: true, center: true, working_group: true };
+  var activeTypes = { researcher: true, group: true, cnpq_group: true, program: true };
   // Overlay layers: all on by default.
   var overlayOn = { pubs: true, sbseg: true, tools: true };
-  var selState = '', selTopic = '', query = '';
+  var selState = '', selTopic = '', selLine = '', query = '';
   var els = {};
 
   function typeLabel(type) { return tr(TYPES[type].key, TYPES[type].def); }
@@ -81,7 +79,7 @@
 
   function buildMarkers() {
     RECORDS.forEach(function (r) {
-      if (r.type === 'publication') return; // aggregated into the pubs overlay
+      if (!TYPES[r.type] || r.type === 'publication') return; // unknown/removed types and aggregated pubs
       if (r.lat == null || r.lng == null) return;
       var m = L.marker([r.lat, r.lng], { icon: icon(r.type) });
       m.bindPopup(detailHTML(r), { maxWidth: 300 });
@@ -91,13 +89,28 @@
     });
   }
 
+  // All CNPq research lines attached to a record: its own (cnpq_group records)
+  // plus the lines of the researcher's groups (researcher records).
+  function recordLines(r) {
+    if (!r._lines) {
+      var ls = (r.lines || []).slice();
+      (r.groups || []).forEach(function (g) { ls = ls.concat(g.lines || []); });
+      r._lines = ls;
+    }
+    return r._lines;
+  }
+
   function matches(r) {
     if (!activeTypes[r.type]) return false;
     if (selState && r.state !== selState) return false;
     if (selTopic && (r.topics || []).indexOf(selTopic) === -1) return false;
+    if (selLine && recordLines(r).indexOf(selLine) === -1) return false;
     if (query) {
       if (!r._hay) r._hay = fold([r.name, r.institution, r.state, r.interests,
-        r.leader, r.project, r.authors, (r.topics || []).join(' ')].join(' '));
+        r.leader, r.project, r.authors, r.education,
+        (r.topics || []).join(' '), recordLines(r).join(' '),
+        (r.members || []).join(' '),
+        (r.groups || []).map(function (g) { return g.name; }).join(' ')].join(' '));
       if (r._hay.indexOf(query) === -1) return false;
     }
     return true;
@@ -114,15 +127,35 @@
     }
     row('map.institution', 'Institution', r.institution);
     row('map.state', 'State', r.state);
+    if (r.education) row('map.education', 'Academic background', r.education);
     if (r.interests) row('map.interests', 'Research interests', r.interests);
     if (r.leader) row('map.leader', 'Leader', r.leader);
     if (r.project) row('map.project', 'Project', r.project);
     if (r.authors) row('map.authors', 'Authors', r.authors);
     if (r.year) row('map.year', 'Year', r.year);
     if (r.topics && r.topics.length) row('map.topics', 'Topics', r.topics.join('; '));
+    if (r.lines && r.lines.length) row('map.groupLines', 'Research lines', r.lines.join('; '));
+    if (r.members && r.members.length) row('map.members', 'Researchers', r.members.join('; '));
     var links = r.links || {};
     if (links.lattes) row('map.lattes', 'Lattes', links.lattes, true);
-    if (links.group) row('map.researchGroup', 'Research group', links.group, true);
+    if (links.scholar) row('map.scholar', 'Google Scholar', links.scholar, true);
+    // CNPq research groups: name + DGP mirror link + own website + research lines.
+    (r.groups || []).forEach(function (g) {
+      if (!g || !g.name) return;
+      var parts = [esc(g.name)];
+      if (g.role === 'líder') parts.push('<em>(' + esc(tr('map.groupLeaderRole', 'leader')) + ')</em>');
+      var lnk = [];
+      if (g.dgp) lnk.push('<a href="' + esc(g.dgp) + '" target="_blank" rel="noopener">CNPq</a>');
+      if (g.site) lnk.push('<a href="' + esc(g.site) + '" target="_blank" rel="noopener">' + esc(tr('map.groupSite', 'website')) + '</a>');
+      if (lnk.length) parts.push('· ' + lnk.join(' · '));
+      var lines = (g.lines && g.lines.length)
+        ? '<br><small>' + esc(tr('map.groupLines', 'Research lines')) + ': ' + esc(g.lines.join('; ')) + '</small>'
+        : '';
+      rows += '<div class="cm-d-row"><span>' + esc(tr('map.cnpqGroup', 'CNPq group')) + '</span><div>' +
+        parts.join(' ') + lines + '</div></div>';
+    });
+    // Legacy single group link, kept for records without the enriched groups array.
+    if (links.group && !(r.groups && r.groups.length)) row('map.researchGroup', 'Research group', links.group, true);
     if (links.program) row('map.program', 'Graduate program', links.program);
     if (links.url) row('map.website', 'Website', links.url, true);
     return '<div class="cm-detail">'
@@ -262,6 +295,17 @@
     els.topic.innerHTML = allTopics + DATA.topics.map(function (tp) {
       return '<option value="' + esc(tp) + '">' + esc(tp) + '</option>';
     }).join('');
+    // CNPq research lines select, computed from the records themselves.
+    if (els.line) {
+      var seen = {};
+      RECORDS.forEach(function (r) { recordLines(r).forEach(function (l) { seen[l] = true; }); });
+      var lines = Object.keys(seen).sort(function (a, b) { return a.localeCompare(b, 'pt'); });
+      var allLines = '<option value="">' + esc(tr('map.allLines', 'All research lines')) + '</option>';
+      els.line.innerHTML = allLines + lines.map(function (l) {
+        return '<option value="' + esc(l) + '">' + esc(l) + '</option>';
+      }).join('');
+      els.line.style.display = lines.length ? '' : 'none';
+    }
     // Form type select mirrors the entity types.
     var mf = document.getElementById('mfType');
     if (mf) mf.innerHTML = TYPE_ORDER.map(function (type) {
@@ -273,9 +317,11 @@
   function relabel() {
     if (!DATA) return;
     buildChips();
-    var sv = els.state.value, tv = els.topic.value;
+    var sv = els.state.value, tv = els.topic.value, lv = els.line ? els.line.value : '';
     buildSelects();
     els.state.value = sv; els.topic.value = tv;
+    if (els.line) els.line.value = lv;
+    renderCnpqList();
     render();
   }
 
@@ -296,9 +342,11 @@
     });
     els.state.addEventListener('change', function () { selState = this.value; render(); });
     els.topic.addEventListener('change', function () { selTopic = this.value; render(); });
+    if (els.line) els.line.addEventListener('change', function () { selLine = this.value; render(); });
     els.clear.addEventListener('click', function () {
-      query = ''; selState = ''; selTopic = '';
+      query = ''; selState = ''; selTopic = ''; selLine = '';
       els.search.value = ''; els.state.value = ''; els.topic.value = '';
+      if (els.line) els.line.value = '';
       render();
     });
     els.list.addEventListener('click', function (e) {
@@ -310,6 +358,36 @@
     });
     document.addEventListener('i18n:applied', relabel);
     initForm();
+  }
+
+  /* Static listing of CNPq research groups and their research lines, below the
+     map. Built from the cnpq_group records of the same dataset. */
+  function renderCnpqList() {
+    var box = document.getElementById('cnpqGroupsList');
+    if (!box) return;
+    var groups = RECORDS.filter(function (r) { return r.type === 'cnpq_group'; })
+      .slice().sort(function (a, b) { return a.name.localeCompare(b.name, 'pt'); });
+    if (!groups.length) {
+      var sec = box.closest('section');
+      if (sec) sec.hidden = true;
+      return;
+    }
+    box.innerHTML = groups.map(function (g) {
+      var links = g.links || {};
+      var lnk = [];
+      if (links.group) lnk.push('<a href="' + esc(links.group) + '" target="_blank" rel="noopener">CNPq</a>');
+      if (links.url) lnk.push('<a href="' + esc(links.url) + '" target="_blank" rel="noopener">' + esc(tr('map.groupSite', 'website')) + '</a>');
+      var meta = [g.institution, g.state].filter(Boolean).join(' · ');
+      var lines = (g.lines || []).map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('');
+      var members = (g.members && g.members.length)
+        ? '<p class="cnpq-g-members"><b>' + esc(tr('map.members', 'Researchers')) + ':</b> ' + esc(g.members.join('; ')) + '</p>'
+        : '';
+      return '<article class="cnpq-g">'
+        + '<h3>' + esc(g.name) + (lnk.length ? ' <span class="cnpq-g-links">' + lnk.join(' · ') + '</span>' : '') + '</h3>'
+        + (meta ? '<p class="cnpq-g-meta">' + esc(meta) + '</p>' : '')
+        + (lines ? '<ul class="cnpq-g-lines">' + lines + '</ul>' : '')
+        + members + '</article>';
+    }).join('');
   }
 
   function initForm() {
@@ -412,6 +490,7 @@
       chips: document.getElementById('mapChips'),
       state: document.getElementById('mapState'),
       topic: document.getElementById('mapTopic'),
+      line: document.getElementById('mapLine'),
       clear: document.getElementById('mapClear'),
       list: document.getElementById('mapList'),
       grid: document.getElementById('mapGrid'),
@@ -431,6 +510,7 @@
         buildChips();
         buildSelects();
         wire();
+        renderCnpqList();
         render();
         ['pubs', 'sbseg', 'tools'].forEach(function (k) { if (overlayOn[k]) setOverlay(k, true); }); // default-on overlays
         if (window.matchMedia('(max-width: 760px)').matches) setView('map');

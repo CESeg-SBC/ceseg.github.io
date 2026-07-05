@@ -453,6 +453,18 @@ body[data-page="publicacoes"] .cards .card:hover::after{opacity:1;transform:tran
 .sbseg-ed b{color:var(--ink)}
 .sbseg-ed-links{margin-top:2px;font-size:.8rem}
 
+/* CNPq research groups listing */
+.cnpq-groups-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:16px;margin-top:18px}
+.cnpq-g{border:1px solid var(--border);border-radius:12px;padding:16px 18px;background:var(--bg)}
+.cnpq-g h3{font-size:.98rem;color:var(--navy);margin:0 0 .3rem;line-height:1.35}
+.cnpq-g-links{font-size:.8rem;font-weight:500;white-space:nowrap}
+.cnpq-g-meta{font-size:.8rem;color:var(--faint);margin:0 0 .45rem}
+.cnpq-g-lines{margin:0;padding-left:18px;font-size:.84rem;color:var(--ink);line-height:1.5}
+.cnpq-g-members{font-size:.8rem;color:var(--muted);margin:.5rem 0 0}
+.cnpq-g-members b{color:var(--faint);font-weight:700;font-size:.72rem;
+  text-transform:uppercase;letter-spacing:.04em}
+
 /* Contact / contribute form */
 .map-contribute .map-form{max-width:720px;margin-top:18px}
 .map-form label{display:block;margin:0 0 14px;font-size:.85rem;font-weight:600;color:var(--ink)}

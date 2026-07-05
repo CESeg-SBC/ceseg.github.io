@@ -306,8 +306,8 @@
     "desc": "Interactive map of Brazilian cybersecurity research: researchers, groups, programs and centers.",
     "eyebrow": "Community · cybersecurity in Brazil",
     "h1": "Cybersecurity Community in Brazil",
-    "lead": "Researchers, research groups, graduate programs and R&D centers in cybersecurity across Brazil. Search by name, institution, state or topic.",
-    "searchPlaceholder": "Search by name, institution, state or topic...",
+    "lead": "Researchers, research groups, CNPq groups and graduate programs in cybersecurity across Brazil. Search by name, institution, state, topic or research line.",
+    "searchPlaceholder": "Search by name, institution, state, topic or research line…",
     "clear": "Clear",
     "of": "of",
     "results": "results",
@@ -330,8 +330,6 @@
     "typeResearcher": "Researchers",
     "typeGroup": "Research Groups",
     "typeProgram": "Graduate Programs",
-    "typeCenter": "R&D Centers",
-    "typeWorkingGroup": "Working Groups",
     "typePublication": "Publications",
     "typeTool": "Tools",
     "pubsCount": "publications (SBSeg)",
@@ -347,7 +345,21 @@
     "lattes": "Lattes",
     "researchGroup": "Research group",
     "program": "Graduate program",
-    "website": "Website"
+    "website": "Website",
+    "scholar": "Google Scholar",
+    "education": "Academic background",
+    "cnpqGroup": "CNPq group",
+    "groupLines": "Research lines",
+    "groupSite": "website",
+    "groupLeaderRole": "leader",
+    "typeCnpqGroup": "CNPq Groups",
+    "allLines": "All research lines",
+    "members": "Researchers"
+  },
+  "cnpq": {
+    "eyebrow": "Directory of Research Groups · CNPq",
+    "h2": "CNPq research groups and research lines",
+    "intro": "Listing of research groups from the Brazilian Directory of Research Groups (DGP/CNPq) linked to the researchers on the map, with their research lines."
   },
   "mapForm": {
     "eyebrow": "Get involved",

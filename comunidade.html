@@ -19,7 +19,7 @@
     <section class="page-head"><div class="wrap">
       <div class="eyebrow" data-i18n="map.eyebrow">Comunidade · cibersegurança no Brasil</div>
       <h1 data-i18n="map.h1">Comunidade de Cibersegurança no Brasil</h1>
-      <p class="lead" data-i18n="map.lead">Pesquisadores, grupos, programas e centros de pesquisa em cibersegurança no Brasil. Busque por nome, instituição, estado ou tema.</p>
+      <p class="lead" data-i18n="map.lead">Pesquisadores, grupos de pesquisa, grupos CNPq e programas de pós-graduação em cibersegurança no Brasil. Busque por nome, instituição, estado, tema ou linha de pesquisa.</p>
     </div></section>
 
     <section class="map-app">
@@ -28,11 +28,12 @@
           <div class="map-search">
             <input type="search" id="mapSearch" autocomplete="off"
                    data-i18n-placeholder="map.searchPlaceholder"
-                   placeholder="Buscar por nome, instituição, estado ou tema...">
+                   placeholder="Buscar por nome, instituição, estado, tema ou linha de pesquisa…">
           </div>
           <div class="map-selects">
             <select id="mapState" aria-label="Estado"></select>
             <select id="mapTopic" aria-label="Tema"></select>
+            <select id="mapLine" aria-label="Linha de pesquisa"></select>
             <button type="button" id="mapClear" class="map-clear" data-i18n="map.clear">Limpar</button>
           </div>
         </div>
@@ -69,6 +70,13 @@
         </div>
       </div>
     </section>
+
+    <section class="section cnpq-groups" id="grupos-cnpq"><div class="wrap">
+      <div class="eyebrow" data-i18n="cnpq.eyebrow">Diretório dos Grupos de Pesquisa · CNPq</div>
+      <h2 data-i18n="cnpq.h2">Grupos de pesquisa CNPq e linhas de pesquisa</h2>
+      <p class="lead" data-i18n="cnpq.intro">Relação dos grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores do mapa, com as respectivas linhas de pesquisa.</p>
+      <div id="cnpqGroupsList" class="cnpq-groups-list"></div>
+    </div></section>
 
     <section class="section map-contribute" id="contribuir"><div class="wrap">
       <div class="eyebrow" data-i18n="mapForm.eyebrow">Participe</div>

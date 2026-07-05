@@ -329,8 +329,8 @@
     "desc": "Mapa interativo da pesquisa brasileira em cibersegurança: pesquisadores, grupos, programas e centros.",
     "eyebrow": "Comunidade · cibersegurança no Brasil",
     "h1": "Comunidade de Cibersegurança no Brasil",
-    "lead": "Pesquisadores, grupos, programas e centros de pesquisa em cibersegurança no Brasil. Busque por nome, instituição, estado ou tema.",
-    "searchPlaceholder": "Buscar por nome, instituição, estado ou tema...",
+    "lead": "Pesquisadores, grupos de pesquisa, grupos CNPq e programas de pós-graduação em cibersegurança no Brasil. Busque por nome, instituição, estado, tema ou linha de pesquisa.",
+    "searchPlaceholder": "Buscar por nome, instituição, estado, tema ou linha de pesquisa…",
     "clear": "Limpar",
     "of": "de",
     "results": "resultados",
@@ -353,8 +353,6 @@
     "typeResearcher": "Pesquisadores",
     "typeGroup": "Grupos de Pesquisa",
     "typeProgram": "Programas de Pós-graduação",
-    "typeCenter": "Centros de P&D",
-    "typeWorkingGroup": "Grupos de Trabalho",
     "typePublication": "Publicações",
     "typeTool": "Ferramentas (SF)",
     "pubsCount": "publicações (SBSeg)",
@@ -370,7 +368,21 @@
     "lattes": "Lattes",
     "researchGroup": "Grupo de pesquisa",
     "program": "Programa de pós-graduação",
-    "website": "Site"
+    "website": "Site",
+    "scholar": "Google Scholar",
+    "education": "Formação acadêmica",
+    "cnpqGroup": "Grupo CNPq",
+    "groupLines": "Linhas de pesquisa",
+    "groupSite": "site",
+    "groupLeaderRole": "líder",
+    "typeCnpqGroup": "Grupos CNPq",
+    "allLines": "Todas as linhas de pesquisa",
+    "members": "Pesquisadores"
+  },
+  "cnpq": {
+    "eyebrow": "Diretório dos Grupos de Pesquisa · CNPq",
+    "h2": "Grupos de pesquisa CNPq e linhas de pesquisa",
+    "intro": "Relação dos grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores do mapa, com as respectivas linhas de pesquisa."
   },
   "mapForm": {
     "eyebrow": "Participe",
