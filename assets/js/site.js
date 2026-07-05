@@ -67,7 +67,7 @@ function renderHeader(current){
 
 function renderBetaBanner(){
   return `<div class="wrap beta-bar">
-    <span class="beta-tag" data-i18n="beta.tag">Beta v0.8</span>
+    <span class="beta-tag" data-i18n="beta.tag">Beta v0.8.5</span>
     <span class="beta-msg" data-i18n="beta.msg">🚧 Site em construção — conteúdo em revisão e sujeito a alterações.</span>
   </div>`;
 }
