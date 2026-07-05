@@ -22,6 +22,7 @@
     "anaisTP": "Artículos · Pista Principal",
     "anaisEst": "Artículos · Anales Extendidos",
     "mapa": "Comunidad",
+    "gruposCnpq": "Grupos de investigación CNPq",
     "tpc": "Estadísticas del TPC",
     "tpcEst": "TPC de los Subeventos"
   },
@@ -42,7 +43,7 @@
     "noLink": "sin enlace"
   },
   "beta": {
-    "tag": "Beta v0.7",
+    "tag": "Beta v0.8",
     "msg": "🚧 Sitio en construcción, el contenido está en revisión y puede cambiar."
   },
   "home": {
@@ -301,6 +302,22 @@
     "tpcCallout": "¿Quiénes de los Comités de Programa publican en sus propios subeventos? Vea el cruce entre los miembros del <b>TPC</b> de cada subevento y los artículos aceptados en cada edición.",
     "tpcCalloutLink": "Ver estadísticas de los TPC →"
   },
+  "gcnpq": {
+    "title": "Grupos de investigación CNPq · CESeg",
+    "desc": "Grupos de investigación del Directorio de Grupos de Investigación (DGP/CNPq) en ciberseguridad en Brasil, con nube de líneas de investigación y búsqueda por tema, institución o coordinador.",
+    "eyebrow": "Directorio de Grupos de Investigación · CNPq",
+    "h1": "Grupos de investigación CNPq y líneas de investigación",
+    "lead": "Grupos de investigación del Directorio de Grupos de Investigación en Brasil (DGP/CNPq) vinculados a los investigadores en ciberseguridad del mapa de la comunidad. Explore la nube de líneas de investigación y busque grupos por tema de interés, institución o coordinador.",
+    "cloudTitle": "Nube de líneas de investigación",
+    "cloudNote": "Términos más recurrentes en las líneas de investigación de los grupos. El tamaño refleja en cuántos grupos aparece el término. Haga clic en un término para filtrar los grupos correspondientes.",
+    "searchPlaceholder": "Buscar por palabra clave, institución o coordinador…",
+    "clear": "Limpiar",
+    "of": "de",
+    "groups": "grupos",
+    "coordinators": "Coordinación",
+    "noResults": "Ningún grupo encontrado.",
+    "loadError": "No se pudieron cargar los datos de los grupos."
+  },
   "map": {
     "title": "Comunidad de Ciberseguridad · CESeg",
     "desc": "Mapa interactivo de la investigación brasileña en ciberseguridad: investigadores, grupos, programas y centros.",
@@ -316,9 +333,12 @@
     "noResults": "No se encontraron resultados.",
     "listCap": "Mostrando los primeros 400 en la lista; todos los resultados aparecen en el mapa.",
     "sourcesTitle": "Origen de los datos",
-    "sourceRnp": "Mapa de Ciberseguridad de la RNP",
+    "sourceCnpq": "CNPq (grupos de investigación)",
+    "sourceScholar": "Google Scholar",
     "sourceSbseg": "Ediciones del SBSeg",
+    "sourceSol": "SOL/SBC",
     "sourceCommunity": "Aportes de la comunidad",
+    "sourceRnp": "Mapa de Ciberseguridad de la RNP",
     "sbsegToggle": "Ediciones del SBSeg",
     "sbsegSite": "sitio",
     "sbsegClone": "clon",
@@ -359,7 +379,8 @@
   "cnpq": {
     "eyebrow": "Directorio de Grupos de Investigación · CNPq",
     "h2": "Grupos de investigación CNPq y líneas de investigación",
-    "intro": "Relación de los grupos de investigación del Directorio de Grupos de Investigación de Brasil (DGP/CNPq) vinculados a los investigadores del mapa, con sus respectivas líneas de investigación."
+    "intro": "Relación de los grupos de investigación del Directorio de Grupos de Investigación de Brasil (DGP/CNPq) vinculados a los investigadores del mapa, con sus respectivas líneas de investigación. En la página dedicada encontrará la nube de líneas de investigación y la búsqueda por tema, institución o coordinador.",
+    "cta": "Explorar los grupos de investigación CNPq →"
   },
   "mapForm": {
     "eyebrow": "Participe",

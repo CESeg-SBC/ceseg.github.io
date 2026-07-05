@@ -82,7 +82,7 @@
       if (!TYPES[r.type] || r.type === 'publication') return; // unknown/removed types and aggregated pubs
       if (r.lat == null || r.lng == null) return;
       var m = L.marker([r.lat, r.lng], { icon: icon(r.type) });
-      m.bindPopup(detailHTML(r), { maxWidth: 300 });
+      m.bindPopup(detailHTML(r), { maxWidth: 380, minWidth: 300, autoPanPadding: [24, 24] });
       m._rec = r;
       m.on('click', function () { highlightCard(r.id); });
       MARKERS[r.id] = m;

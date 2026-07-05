@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="gcnpq.title">Grupos de pesquisa CNPq · CESeg</title>
+  <meta name="description" data-i18n="gcnpq.desc" data-i18n-attr="content" content="Grupos de pesquisa do Diretório dos Grupos de Pesquisa (DGP/CNPq) em cibersegurança no Brasil, com nuvem de linhas de pesquisa e busca por tema, instituição ou coordenador.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="grupos-cnpq">
+  <header id="site-header"></header>
+  <main>
+    <section class="page-head"><div class="wrap">
+      <div class="eyebrow" data-i18n="gcnpq.eyebrow">Diretório dos Grupos de Pesquisa · CNPq</div>
+      <h1 data-i18n="gcnpq.h1">Grupos de pesquisa CNPq e linhas de pesquisa</h1>
+      <p class="lead" data-i18n="gcnpq.lead">Grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores em cibersegurança do mapa da comunidade. Explore a nuvem de linhas de pesquisa e busque grupos por tema de interesse, instituição ou coordenador.</p>
+    </div></section>
+
+    <section class="section gcnpq-app"><div class="wrap">
+      <div class="gcnpq-cloud-box" aria-labelledby="gcnpqCloudTitle">
+        <h2 id="gcnpqCloudTitle" class="gcnpq-cloud-title" data-i18n="gcnpq.cloudTitle">Nuvem de linhas de pesquisa</h2>
+        <p class="gcnpq-cloud-note" data-i18n="gcnpq.cloudNote">Termos mais recorrentes nas linhas de pesquisa dos grupos. O tamanho reflete em quantos grupos o termo aparece. Clique em um termo para filtrar os grupos correspondentes.</p>
+        <div class="wordcloud" id="gcnpqCloud" role="group" aria-label="Nuvem de termos"></div>
+      </div>
+
+      <div class="gcnpq-toolbar">
+        <div class="gcnpq-search">
+          <input type="search" id="gcnpqSearch" autocomplete="off"
+                 data-i18n-placeholder="gcnpq.searchPlaceholder"
+                 placeholder="Buscar por palavra-chave, instituição ou coordenador…">
+          <button type="button" id="gcnpqClear" class="map-clear" data-i18n="gcnpq.clear">Limpar</button>
+        </div>
+        <span class="gcnpq-count"><b id="gcnpqVisible">0</b> <span data-i18n="gcnpq.of">de</span> <b id="gcnpqTotal">0</b> <span data-i18n="gcnpq.groups">grupos</span></span>
+      </div>
+
+      <div class="cnpq-groups-list" id="gcnpqList" aria-label="Grupos de pesquisa"></div>
+      <p class="map-empty" id="gcnpqEmpty" hidden data-i18n="gcnpq.noResults">Nenhum grupo encontrado.</p>
+    </div></section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/grupos-cnpq.js"></script>
+</body>
+</html>

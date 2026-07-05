@@ -21,7 +21,8 @@ const NAV = [
   {key:'nav.org', href:'organizacao.html', children:[
     {key:'nav.comissoes', href:'comissoes.html'},
     {key:'nav.conferencistas', href:'conferencistas.html'}]},
-  {key:'nav.mapa', href:'comunidade.html'},
+  {key:'nav.mapa', href:'comunidade.html', children:[
+    {key:'nav.gruposCnpq', href:'grupos-cnpq.html'}]},
   {key:'nav.sbseg', href:'https://sbseg-sbc.github.io'},
   {key:'nav.homenagens', href:'homenageados.html'},
   {key:'nav.publicacoes', href:'publicacoes.html', children:[
@@ -66,7 +67,7 @@ function renderHeader(current){
 
 function renderBetaBanner(){
   return `<div class="wrap beta-bar">
-    <span class="beta-tag" data-i18n="beta.tag">Beta v0.7</span>
+    <span class="beta-tag" data-i18n="beta.tag">Beta v0.8</span>
     <span class="beta-msg" data-i18n="beta.msg">🚧 Site em construção — conteúdo em revisão e sujeito a alterações.</span>
   </div>`;
 }

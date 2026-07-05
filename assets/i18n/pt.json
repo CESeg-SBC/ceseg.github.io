@@ -22,6 +22,7 @@
     "anaisTP": "Artigos · Trilha Principal",
     "anaisEst": "Artigos · Anais Estendidos",
     "mapa": "Comunidade",
+    "gruposCnpq": "Grupos de pesquisa CNPq",
     "tpc": "Estatísticas do TPC",
     "tpcEst": "TPC dos Sub-eventos"
   },
@@ -42,7 +43,7 @@
     "noLink": "sem link"
   },
   "beta": {
-    "tag": "Beta v0.7",
+    "tag": "Beta v0.8",
     "msg": "🚧 Site em construção, conteúdo em revisão e sujeito a alterações."
   },
   "home": {
@@ -324,6 +325,22 @@
     "tpcCallout": "Quem dos Comitês de Programa publica nos próprios sub-eventos? Veja o cruzamento entre os membros do <b>TPC</b> de cada sub-evento e os artigos aceitos em cada edição.",
     "tpcCalloutLink": "Ver estatísticas dos TPCs →"
   },
+  "gcnpq": {
+    "title": "Grupos de pesquisa CNPq · CESeg",
+    "desc": "Grupos de pesquisa do Diretório dos Grupos de Pesquisa (DGP/CNPq) em cibersegurança no Brasil, com nuvem de linhas de pesquisa e busca por tema, instituição ou coordenador.",
+    "eyebrow": "Diretório dos Grupos de Pesquisa · CNPq",
+    "h1": "Grupos de pesquisa CNPq e linhas de pesquisa",
+    "lead": "Grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores em cibersegurança do mapa da comunidade. Explore a nuvem de linhas de pesquisa e busque grupos por tema de interesse, instituição ou coordenador.",
+    "cloudTitle": "Nuvem de linhas de pesquisa",
+    "cloudNote": "Termos mais recorrentes nas linhas de pesquisa dos grupos. O tamanho reflete em quantos grupos o termo aparece. Clique em um termo para filtrar os grupos correspondentes.",
+    "searchPlaceholder": "Buscar por palavra-chave, instituição ou coordenador…",
+    "clear": "Limpar",
+    "of": "de",
+    "groups": "grupos",
+    "coordinators": "Coordenação",
+    "noResults": "Nenhum grupo encontrado.",
+    "loadError": "Não foi possível carregar os dados dos grupos."
+  },
   "map": {
     "title": "Comunidade de Cibersegurança · CESeg",
     "desc": "Mapa interativo da pesquisa brasileira em cibersegurança: pesquisadores, grupos, programas e centros.",
@@ -339,9 +356,12 @@
     "noResults": "Nenhum resultado encontrado.",
     "listCap": "Mostrando os primeiros 400 na lista; todos os resultados aparecem no mapa.",
     "sourcesTitle": "Origens dos dados",
-    "sourceRnp": "Mapa de Cibersegurança da RNP",
+    "sourceCnpq": "CNPq (grupos de pesquisa)",
+    "sourceScholar": "Google Scholar",
     "sourceSbseg": "Edições do SBSeg",
+    "sourceSol": "SOL/SBC",
     "sourceCommunity": "Contribuições da comunidade",
+    "sourceRnp": "Mapa de Cibersegurança da RNP",
     "sbsegToggle": "Edições do SBSeg",
     "sbsegSite": "site",
     "sbsegClone": "clone",
@@ -382,7 +402,8 @@
   "cnpq": {
     "eyebrow": "Diretório dos Grupos de Pesquisa · CNPq",
     "h2": "Grupos de pesquisa CNPq e linhas de pesquisa",
-    "intro": "Relação dos grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores do mapa, com as respectivas linhas de pesquisa."
+    "intro": "Relação dos grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores do mapa, com as respectivas linhas de pesquisa. Na página dedicada você encontra a nuvem de linhas de pesquisa e a busca por tema, instituição ou coordenador.",
+    "cta": "Explorar os grupos de pesquisa CNPq →"
   },
   "mapForm": {
     "eyebrow": "Participe",

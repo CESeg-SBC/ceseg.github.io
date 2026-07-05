@@ -22,6 +22,7 @@
     "anaisTP": "Papers · Main Track",
     "anaisEst": "Papers · Extended Annals",
     "mapa": "Community",
+    "gruposCnpq": "CNPq Research Groups",
     "tpc": "TPC Statistics",
     "tpcEst": "Sub-event TPCs"
   },
@@ -42,7 +43,7 @@
     "noLink": "no link"
   },
   "beta": {
-    "tag": "Beta v0.7",
+    "tag": "Beta v0.8",
     "msg": "🚧 Site under construction, content is being reviewed and may change."
   },
   "home": {
@@ -301,6 +302,22 @@
     "tpcCallout": "Which Program Committee members publish in their own sub-events? See the cross-reference between each sub-event's <b>TPC</b> and the papers accepted in every edition.",
     "tpcCalloutLink": "See the TPC statistics →"
   },
+  "gcnpq": {
+    "title": "CNPq Research Groups · CESeg",
+    "desc": "Research groups from the Brazilian Research Groups Directory (DGP/CNPq) working on cybersecurity, with a research-lines word cloud and search by topic, institution or coordinator.",
+    "eyebrow": "Research Groups Directory · CNPq",
+    "h1": "CNPq research groups and research lines",
+    "lead": "Research groups from the Brazilian Research Groups Directory (DGP/CNPq) linked to the cybersecurity researchers on the community map. Explore the research-lines word cloud and search groups by topic of interest, institution or coordinator.",
+    "cloudTitle": "Research-lines word cloud",
+    "cloudNote": "Most recurrent terms across the groups' research lines. Size reflects how many groups a term appears in. Click a term to filter the matching groups.",
+    "searchPlaceholder": "Search by keyword, institution or coordinator…",
+    "clear": "Clear",
+    "of": "of",
+    "groups": "groups",
+    "coordinators": "Coordination",
+    "noResults": "No groups found.",
+    "loadError": "Could not load the research-group data."
+  },
   "map": {
     "title": "Cybersecurity Community · CESeg",
     "desc": "Interactive map of Brazilian cybersecurity research: researchers, groups, programs and centers.",
@@ -316,9 +333,12 @@
     "noResults": "No results found.",
     "listCap": "Showing the first 400 in the list; all matches appear on the map.",
     "sourcesTitle": "Data sources",
-    "sourceRnp": "RNP Cybersecurity Map",
+    "sourceCnpq": "CNPq (research groups)",
+    "sourceScholar": "Google Scholar",
     "sourceSbseg": "SBSeg editions",
+    "sourceSol": "SOL/SBC",
     "sourceCommunity": "Community contributions",
+    "sourceRnp": "RNP Cybersecurity Map",
     "sbsegToggle": "SBSeg editions",
     "sbsegSite": "site",
     "sbsegClone": "clone",
@@ -359,7 +379,8 @@
   "cnpq": {
     "eyebrow": "Directory of Research Groups · CNPq",
     "h2": "CNPq research groups and research lines",
-    "intro": "Listing of research groups from the Brazilian Directory of Research Groups (DGP/CNPq) linked to the researchers on the map, with their research lines."
+    "intro": "Listing of research groups from the Brazilian Directory of Research Groups (DGP/CNPq) linked to the researchers on the map, with their research lines. On the dedicated page you can explore the research-lines word cloud and search by topic, institution or coordinator.",
+    "cta": "Explore the CNPq research groups →"
   },
   "mapForm": {
     "eyebrow": "Get involved",
