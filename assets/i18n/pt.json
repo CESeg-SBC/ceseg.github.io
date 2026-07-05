@@ -373,6 +373,8 @@
     "wticgStatPapers": "trabalhos",
     "wticgStatEditions": "edições",
     "wticgStatAuthors": "autores",
+    "wticgStatInstitutions": "instituições",
+    "wticgTopInstitutions": "Instituições com mais trabalhos",
     "wticgPerYear": "Trabalhos por edição",
     "wticgTopAuthors": "Autores mais frequentes",
     "loadError": "Não foi possível carregar os dados do mapa.",
@@ -416,7 +418,7 @@
   "wticg": {
     "eyebrow": "SBSeg Estendido · Iniciação Científica",
     "h2": "WTICG · Trabalhos de Iniciação Científica e de Graduação",
-    "intro": "Estatísticas das publicações no Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), sub-evento dos Anais Estendidos do SBSeg. No mapa acima, ative a camada WTICG para ver, por cidade-sede, quantos trabalhos foram apresentados em cada edição.",
+    "intro": "Estatísticas das publicações no Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), sub-evento dos Anais Estendidos do SBSeg. Cada trabalho é associado às instituições dos seus autores (extraídas do SOL/SBC); trabalhos com coautores de várias instituições aparecem em todas elas. No mapa acima, ative a camada WTICG para ver os trabalhos por instituição.",
     "cta": "Ver os artigos dos Anais Estendidos →"
   },
   "mapForm": {

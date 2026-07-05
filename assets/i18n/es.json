@@ -350,6 +350,8 @@
     "wticgStatPapers": "trabajos",
     "wticgStatEditions": "ediciones",
     "wticgStatAuthors": "autores",
+    "wticgStatInstitutions": "instituciones",
+    "wticgTopInstitutions": "Instituciones con más trabajos",
     "wticgPerYear": "Trabajos por edición",
     "wticgTopAuthors": "Autores más frecuentes",
     "loadError": "No se pudieron cargar los datos del mapa.",
@@ -393,7 +395,7 @@
   "wticg": {
     "eyebrow": "SBSeg Extendido · Iniciación Científica",
     "h2": "WTICG · Trabajos de Iniciación Científica y de Grado",
-    "intro": "Estadísticas de las publicaciones en el Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), subevento de los Anales Extendidos del SBSeg. En el mapa de arriba, active la capa WTICG para ver, por ciudad sede, cuántos trabajos se presentaron en cada edición.",
+    "intro": "Estadísticas de las publicaciones en el Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), subevento de los Anales Extendidos del SBSeg. Cada trabajo se asocia a las instituciones de sus autores (extraídas del SOL/SBC); los trabajos con coautores de varias instituciones aparecen en todas ellas. En el mapa de arriba, active la capa WTICG para ver los trabajos por institución.",
     "cta": "Ver los artículos de los Anales Extendidos →"
   },
   "mapForm": {

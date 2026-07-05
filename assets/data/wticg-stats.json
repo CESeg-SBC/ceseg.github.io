@@ -1,7 +1,7 @@
 {
   "workshop": "WTICG",
   "name": "Workshop de Trabalhos de Iniciação Científica e de Graduação",
-  "note": "Papers do Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG) por edição do SBSeg. Gerado por scripts/build_wticg_stats.py a partir de scripts/sbseg_data.json e assets/data/sbseg-editions.json. Não inclui o WTICG em Andamento.",
+  "note": "Trabalhos do WTICG mapeados pelas instituições dos autores (um trabalho aparece em cada instituição dos coautores). Autores e afiliações extraídos das páginas do SOL/SBC (meta citation_author/citation_author_institution). Gerado por scripts/build_wticg_stats.py. Não inclui o WTICG em Andamento.",
   "anais_page": "anais-estendidos.html",
   "total_papers": 118,
   "n_editions": 8,
@@ -15,63 +15,40 @@
     2024,
     2025
   ],
-  "distinct_authors": 292,
+  "distinct_authors": 291,
+  "distinct_institutions": 53,
   "per_year": [
     {
       "year": 2018,
-      "n": 13,
-      "city": "Natal",
-      "uf": "RN",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/277"
+      "n": 13
     },
     {
       "year": 2019,
-      "n": 16,
-      "city": "São Paulo",
-      "uf": "SP",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/692"
+      "n": 16
     },
     {
       "year": 2020,
-      "n": 13,
-      "city": "Petrópolis",
-      "uf": "RJ",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/895"
+      "n": 13
     },
     {
       "year": 2021,
-      "n": 17,
-      "city": "Belém",
-      "uf": "PA",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/823"
+      "n": 17
     },
     {
       "year": 2022,
-      "n": 13,
-      "city": "Santa Maria",
-      "uf": "RS",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/985"
+      "n": 13
     },
     {
       "year": 2023,
-      "n": 23,
-      "city": "Juiz de Fora",
-      "uf": "MG",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/1211"
+      "n": 23
     },
     {
       "year": 2024,
-      "n": 9,
-      "city": "São José dos Campos",
-      "uf": "SP",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/1351"
+      "n": 9
     },
     {
       "year": 2025,
-      "n": 14,
-      "city": "Foz do Iguaçu",
-      "uf": "PR",
-      "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/1557"
+      "n": 14
     }
   ],
   "top_authors": [
@@ -84,7 +61,7 @@
       "n": 6
     },
     {
-      "name": "André Grégio",
+      "name": "Luciano Ignaczak",
       "n": 4
     },
     {
@@ -92,28 +69,12 @@
       "n": 4
     },
     {
-      "name": "Luciano Ignaczak",
-      "n": 4
-    },
-    {
       "name": "Nilson M. Lazarin",
       "n": 4
     },
     {
-      "name": "Eduardo K. Viegas",
-      "n": 3
-    },
-    {
-      "name": "Eduardo L. Feitosa",
-      "n": 3
-    },
-    {
-      "name": "Jhonatan Geremias",
-      "n": 3
-    },
-    {
-      "name": "Marcus Botacin",
-      "n": 3
+      "name": "André Grégio",
+      "n": 4
     },
     {
       "name": "Regina Marin",
@@ -128,750 +89,1590 @@
       "n": 3
     },
     {
+      "name": "Jhonatan Geremias",
+      "n": 3
+    },
+    {
+      "name": "Eduardo K. Viegas",
+      "n": 3
+    },
+    {
+      "name": "Eduardo L. Feitosa",
+      "n": 3
+    },
+    {
+      "name": "Marcus Botacin",
+      "n": 3
+    },
+    {
       "name": "Adriano M. Rocha",
       "n": 2
     },
     {
-      "name": "Carlo da Silva",
+      "name": "Juliano F. Kazienko",
       "n": 2
     },
     {
-      "name": "Denise Goya",
+      "name": "Ismayle de S. Santos",
       "n": 2
     },
     {
-      "name": "Diego Fernandes Gonçalves Martins",
-      "n": 2
-    },
-    {
-      "name": "Eduardo Luzeiro Feitosa",
-      "n": 2
-    },
-    {
-      "name": "Felipe Leite Lobo",
+      "name": "Ryan M. S. Leal",
       "n": 2
     },
     {
       "name": "Iguatemi E. Fonseca",
       "n": 2
+    },
+    {
+      "name": "Marcelo Henrique Oliveira Henklain",
+      "n": 2
+    },
+    {
+      "name": "Felipe Leite Lobo",
+      "n": 2
     }
   ],
-  "cities": [
+  "top_institutions": [
     {
-      "city": "Juiz de Fora",
+      "name": "Universidade Estadual de Campinas",
+      "key": "UNICAMP",
+      "n": 21
+    },
+    {
+      "name": "CEFET/RJ",
+      "key": "CEFET-RJ",
+      "n": 7
+    },
+    {
+      "name": "Universidade Federal de Uberlândia",
+      "key": "UFU",
+      "n": 7
+    },
+    {
+      "name": "Universidade de São Paulo",
+      "key": "USP",
+      "n": 7
+    },
+    {
+      "name": "Universidade Federal do Amazonas",
+      "key": "UFAM",
+      "n": 6
+    },
+    {
+      "name": "Universidade Federal do Pará",
+      "key": "UFPA",
+      "n": 6
+    },
+    {
+      "name": "Universidade Federal Fluminense",
+      "key": "UFF",
+      "n": 5
+    },
+    {
+      "name": "Universidade Federal do Pampa",
+      "key": "UNIPAMPA",
+      "n": 5
+    },
+    {
+      "name": "Universidade Federal do Paraná",
+      "key": "UFPR",
+      "n": 5
+    },
+    {
+      "name": "Universidade Federal do Rio Grande do Norte",
+      "key": "UFRN",
+      "n": 5
+    },
+    {
+      "name": "Pontifícia Universidade Católica do Paraná",
+      "key": "PUCPR",
+      "n": 4
+    },
+    {
+      "name": "Universidade Federal de Santa Maria",
+      "key": "UFSM",
+      "n": 4
+    },
+    {
+      "name": "Universidade Federal do ABC",
+      "key": "UFABC",
+      "n": 4
+    },
+    {
+      "name": "Universidade do Vale do Rio dos Sinos",
+      "key": "UNISINOS",
+      "n": 4
+    },
+    {
+      "name": "CEFET/MG",
+      "key": "CEFET-MG",
+      "n": 3
+    }
+  ],
+  "institutions": [
+    {
+      "key": "UNICAMP",
+      "name": "Universidade Estadual de Campinas",
+      "city": "Campinas",
+      "uf": "SP",
+      "lat": -22.8172,
+      "lng": -47.0694,
+      "paper_count": 21,
+      "papers": [
+        {
+          "title": "Regressão da eficácia de analisadores de vulnerabilidades em contratos inteligentes de blockchains",
+          "authors": "Rafael Santa Rosa Alves, Marco Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36763",
+          "year": 2025
+        },
+        {
+          "title": "Compact Memory Implementations of the ML-DSA Post-Quantum Digital Signature Algorithm",
+          "authors": "Rodrigo Duarte de Meneses, Caio Teixeira, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30141",
+          "year": 2024
+        },
+        {
+          "title": "Analysis of Committeeless Proof-of-Stake protocol: Searching for a better point of operation",
+          "authors": "Vinícius Peixoto, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27307",
+          "year": 2023
+        },
+        {
+          "title": "Análise comparativa da eficiência de mecanismos de consenso Proof-of-Stake com e sem comitês de validação",
+          "authors": "Matheus Acauã Dias, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27304",
+          "year": 2023
+        },
+        {
+          "title": "Impacto da otimização de funções hash no desempenho do algoritmo de assinatura digital pós-quântica CRYSTALS-Dilithium",
+          "authors": "Rodrigo Duarte de Meneses, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27300",
+          "year": 2023
+        },
+        {
+          "title": "Um estudo preliminar sobre a criação de autenticação alternativa via identificadores descentralizados Aries para a Federação CAFe da RNP",
+          "authors": "Giovanni M. Quintella Gama, Marco A. Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27305",
+          "year": 2023
+        },
+        {
+          "title": "Análise de viabilidade de implantação de sistema de autenticação híbrido baseado em Identidades Digitais Federadas e Identidades Digitais Descentralizadas",
+          "authors": "Raquel Pereira Leite, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21714",
+          "year": 2022
+        },
+        {
+          "title": "Avaliação de requisitos de processamento e memória do algoritmo de criptografia pós-quântica SABER em plataforma ARM Cortex-M0+",
+          "authors": "George Gigilas Junior, Marco A. A. Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21711",
+          "year": 2022
+        },
+        {
+          "title": "Estudos de otimização do algoritmo de criptografia pós-quântica CRYSTALS-KYBER",
+          "authors": "Luiz F. C. Ferro, Felipe J. A. Rampazzo, Marco A. A. Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17353",
+          "year": 2021
+        },
+        {
+          "title": "Proposta de avaliação do desempenho de um mecanismo de consenso probabilístico baseado em Proof-of-Stake para blockchains públicas",
+          "authors": "Felipe Benedet da Silva, Diego Fernandes Gonçalves Martins, Marco Aurelio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17359",
+          "year": 2021
+        },
+        {
+          "title": "Avaliação dos requisitos de tempo e espaço de assinaturas digitais stateful baseadas em funções hash para blockchains",
+          "authors": "José Augusto A. G. de M. Braga, Marco A. A. Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19292",
+          "year": 2020
+        },
+        {
+          "title": "Estudo comparativo de desempenho em Assinaturas Digitais Pós-Quânticas para plataformas de IoT",
+          "authors": "Vitor Nagata, Marco A. A. Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19293",
+          "year": 2020
+        },
+        {
+          "title": "Ferramenta de monitoramento gráfico para suporte à criação e testes de novos mecanismos de consenso em blockchains",
+          "authors": "Bryan Wolff, Diego Fernandes Gonçalves Martins, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19290",
+          "year": 2020
+        },
+        {
+          "title": "Uma comparação de desempenho de algoritmos para criptografia pós-quântica",
+          "authors": "Pedro Rubbioli Amorim, Marco A. A. Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19291",
+          "year": 2020
+        },
+        {
+          "title": "Machine Learning for Malware Detection: Beyond Accuracy Rates",
+          "authors": "Lucas Galante, Marcus Botacin, André Grégio, Paulo de Geus",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14005",
+          "year": 2019
+        },
+        {
+          "title": "Tocker: framework para a segurança de containers Docker",
+          "authors": "Felipe Balabanian, Marco Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14016",
+          "year": 2019
+        },
+        {
+          "title": "Aperfeiçoamento da ferramenta sdhash para identificação de artefatos similares em investigações forenses",
+          "authors": "André Seiki Kameyama, Vitor Hugo Galhardo Moia, Marco Aurelio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4161",
+          "year": 2018
+        },
+        {
+          "title": "Aprimorando o simulador Simbo para testes de botnets avançadas",
+          "authors": "Fábio Harada Kubo, Moisés Danziger, Marco Aurélio Amaral Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4163",
+          "year": 2018
+        },
+        {
+          "title": "Large Scale Studies: Malware Needles in a Haystack",
+          "authors": "Giovanni Bertão, Marcus Botacin, André Grégio, Paulo Lício de Geus",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4159",
+          "year": 2018
+        },
+        {
+          "title": "Malicious Linux Binaries: A Landscape",
+          "authors": "Lucas Galante, Marcus Botacin, André Grégio, Paulo Lício de Geus",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4160",
+          "year": 2018
+        },
+        {
+          "title": "On-block certs: blockchain-based lightweight digital certificates",
+          "authors": "Nícolas F. R. A. Prado, Marco A. A. Henriques",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4154",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "CEFET-RJ",
+      "name": "CEFET/RJ",
+      "city": "Rio de Janeiro",
+      "uf": "RJ",
+      "lat": -22.9128,
+      "lng": -43.2246,
+      "paper_count": 7,
+      "papers": [
+        {
+          "title": "Análise de dados administrativos de e-commerce: Uma abordagem focada no cliente",
+          "authors": "Brayner Cristian Mello Carvalho, Nilson M. Lazarin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27296",
+          "year": 2023
+        },
+        {
+          "title": "Análise dos Mecanismos de Geração e Armazenamento de Chaves em Carteiras de Criptomoedas",
+          "authors": "Anderson O. de Souza, José Vitor H. da Silva, Nilson M. Lazarin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27302",
+          "year": 2023
+        },
+        {
+          "title": "Detecção de ataques de phishing em tempo real utilizando algoritmos de aprendizado de máquina",
+          "authors": "João A. Souza, Dalbert M. Mascarenhas",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27289",
+          "year": 2023
+        },
+        {
+          "title": "Uma abordagem para gestão de cenários no ensino de Segurança de Sistemas de Informação",
+          "authors": "Rafael Vinícius Barros Ferreira, Bruno P. T. Freitas, Nilson M. Lazarin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27295",
+          "year": 2023
+        },
+        {
+          "title": "Uma análise de desempenho de funções de encriptação nativas de SGDBs Open Source",
+          "authors": "Andre de Souza Rosa, Nilson M. Lazarin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27285",
+          "year": 2023
+        },
+        {
+          "title": "Sistema de Votação Eletrônica baseado em Assinatura Cega e BigchainDB",
+          "authors": "Leonardo Pinto Guilherme, Luis Claudio Batista da Silva, Nilson Mori Lazarin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21718",
+          "year": 2022
+        },
+        {
+          "title": "Análise e comparação de algoritmos criptográficos simétricos embarcados na plataforma Arduino",
+          "authors": "João Victor Guinelli, Octavio Vieira Aguiar, Nilson Mori Lazarin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4153",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "UFU",
+      "name": "Universidade Federal de Uberlândia",
+      "city": "Uberlândia",
       "uf": "MG",
-      "lat": -21.764,
-      "lng": -43.349,
-      "total": 23,
-      "editions": [
+      "lat": -18.9186,
+      "lng": -48.257,
+      "paper_count": 7,
+      "papers": [
         {
-          "year": 2023,
-          "n": 23,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/1211",
-          "papers": [
-            {
-              "title": "Uma análise de desempenho de funções de encriptação nativas de SGDBs Open Source",
-              "authors": "Andre de Souza Rosa, Nilson M. Lazarin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27285"
-            },
-            {
-              "title": "Filtragem de Pacotes na Borda da Rede: Uma Análise Comparativa com Foco no Consumo de Energia",
-              "authors": "Arthur Eugenio Silverio, Hélio Crestana Guardia",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27286"
-            },
-            {
-              "title": "Detecção de Ataques DDoS em Redes SDN Utilizando Aprendizado de Máquina: Uma Abordagem em Microsserviços",
-              "authors": "Victor Dias, Murilo Silva, Matheus Gomes, Lucas B. Oliveira, Diego Abreu, João Ferreira, Antônio Abelém",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27287"
-            },
-            {
-              "title": "Desafios da Autenticação e Autorização na Comunicação entre Serviços em Arquiteturas de Microsserviços",
-              "authors": "Lis Araújo, Edwin Marinho",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27288"
-            },
-            {
-              "title": "Detecção de ataques de phishing em tempo real utilizando algoritmos de aprendizado de máquina",
-              "authors": "João A. Souza, Dalbert M. Mascarenhas",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27289"
-            },
-            {
-              "title": "iOSDBuilder: Uma Ferramenta de Construção de Datasets para Detecção de Malwares iOS",
-              "authors": "João Guilherme Freitas, Vanderson Rocha, Eduardo Feitosa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27290"
-            },
-            {
-              "title": "Segurança em Internet das Coisas: Uma Análise de Comportamento de Rede sob Ataque",
-              "authors": "Alexandre M. Carrer, Cíntia B. Margi",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27291"
-            },
-            {
-              "title": "Instrumentação de programas binários legados para compatibilização com Intel CET",
-              "authors": "Éverton C. Araújo, Mateus Tymburibá, Andrei Rimsa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27292"
-            },
-            {
-              "title": "Framework de autenticação web via reconhecimento facial",
-              "authors": "Samuel F. Santos, Mateus Tymburibá",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27293"
-            },
-            {
-              "title": "Uma Abordagem para Testes de Segurança em Aplicações Android",
-              "authors": "Leonardo O. Silva, Emanuel B. Rodrigues, Ismayle de S. Santos",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27294"
-            },
-            {
-              "title": "Uma abordagem para gestão de cenários no ensino de Segurança de Sistemas de Informação",
-              "authors": "Rafael Vinícius Barros Ferreira, Bruno P. T. Freitas, Nilson M. Lazarin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27295"
-            },
-            {
-              "title": "Análise de dados administrativos de e-commerce: Uma abordagem focada no cliente",
-              "authors": "Brayner Cristian Mello Carvalho, Nilson M. Lazarin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27296"
-            },
-            {
-              "title": "Secflow: Aprendizado não supervisionado para análise e detecção de anomalias em Redes de Computadores",
-              "authors": "Felipe M. Salles, Taiane C. Ramos, Luiz Claudio Schara",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27297"
-            },
-            {
-              "title": "A coercion-resistant online voting protocol based on blind signatures and fake credentials",
-              "authors": "Vítor Rezende Silva, Charles F. de Barros",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27298"
-            },
-            {
-              "title": "Modelagem das Áreas de Risco de Sistemas de Detecção de Intrusão para Cálculo de Métricas de Privacidade",
-              "authors": "Jessica Yumi Nakano Sato, Daniel Macêdo Batista",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27299"
-            },
-            {
-              "title": "Impacto da otimização de funções hash no desempenho do algoritmo de assinatura digital pós-quântica CRYSTALS-Dilithium",
-              "authors": "Rodrigo Duarte de Meneses, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27300"
-            },
-            {
-              "title": "Aplicação de Criptografia Homomórfica na Mineração de Dados em Fluxos de Roteadores de Borda na Internet",
-              "authors": "Felipe M. F. de Assis, Evandro L. C. Macedo, Luís F. M. de Moraes",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27301"
-            },
-            {
-              "title": "Análise dos Mecanismos de Geração e Armazenamento de Chaves em Carteiras de Criptomoedas",
-              "authors": "Anderson O. de Souza, José Vitor H. da Silva, Nilson M. Lazarin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27302"
-            },
-            {
-              "title": "BOU-Guard: Uma Abordagem para Detecção de Conteúdo Impróprio na Internet",
-              "authors": "Guilherme Bou, Adriano M. Rocha, Vagner E. Quincozes, Silvio E. Quincozes, Juliano F. Kazienko",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27303"
-            },
-            {
-              "title": "Análise comparativa da eficiência de mecanismos de consenso Proof-of-Stake com e sem comitês de validação",
-              "authors": "Matheus Acauã Dias, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27304"
-            },
-            {
-              "title": "Um estudo preliminar sobre a criação de autenticação alternativa via identificadores descentralizados Aries para a Federação CAFe da RNP",
-              "authors": "Giovanni M. Quintella Gama, Marco A. Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27305"
-            },
-            {
-              "title": "Fuzzing para o Protocolo TLS: Estado da Arte e Comparação de Fuzzers Existentes",
-              "authors": "Filipe T. Velozo, Thiago D. Ferreira, Eduardo F. Pacheco, Renan C. A. Alves, Marcos A. Simplicio Jr., Bruno C. Albertini, Daniel M. Batista",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27306"
-            },
-            {
-              "title": "Analysis of Committeeless Proof-of-Stake protocol: Searching for a better point of operation",
-              "authors": "Vinícius Peixoto, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27307"
-            }
-          ]
+          "title": "Caracterização de Phishing com Grandes Modelos de Linguagem (LLMs): Uma Avaliação Comparativa entre Gemini, DeepSeek e ChatGPT",
+          "authors": "Evelyn E. B. Bustamante, Adriano M. Rocha, Silvio E. Quincozes, Juliano F. Kazienko, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36759",
+          "year": 2025
+        },
+        {
+          "title": "Proteção de Dados e Conformidade Legal: Uma revisão de Ferramentas, Práticas de Segurança e Direções Futuras",
+          "authors": "Camilla C. B. Quincozes, Ketrin Vargas, Silvio E. Quincozes, César Murilo Silva Jr., Rafael D. Araújo, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30145",
+          "year": 2024
+        },
+        {
+          "title": "BOU-Guard: Uma Abordagem para Detecção de Conteúdo Impróprio na Internet",
+          "authors": "Guilherme Bou, Adriano M. Rocha, Vagner E. Quincozes, Silvio E. Quincozes, Juliano F. Kazienko",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27303",
+          "year": 2023
+        },
+        {
+          "title": "Sandbox as a Service: automatizando a configuracão do Cuckoo Sandbox e a geração de dados para análise de malware",
+          "authors": "Guilherme V. Figueiredo, Renan G. Cattelan, Rodrigo S. Miani",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21710",
+          "year": 2022
+        },
+        {
+          "title": "Transações OP_RETURN: uma oportunidade de análise forense",
+          "authors": "Luis Benito Sanches Bulhões, Ivan Sendin, Rodrigo Sanches Miani",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17355",
+          "year": 2021
+        },
+        {
+          "title": "Smart Contracts como uma plataforma para computação segura",
+          "authors": "Bianca Cristina da Silva, Ivan da Silva Sendin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19289",
+          "year": 2020
+        },
+        {
+          "title": "Towards to fair trade with item validation using Bloom Filters and Smart Contracts",
+          "authors": "Matheus Cunha Reis, Ivan da Silva Sendin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19287",
+          "year": 2020
         }
       ]
     },
     {
-      "city": "Belém",
-      "uf": "PA",
-      "lat": -1.455,
-      "lng": -48.49,
-      "total": 17,
-      "editions": [
-        {
-          "year": 2021,
-          "n": 17,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/823",
-          "papers": [
-            {
-              "title": "Análise Exploratória de Atributos Textuais em Bases de Dados para Identificação de Campos Sensíveis",
-              "authors": "Bruno H. Labres, André Grégio, Fabiano Silva",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17365"
-            },
-            {
-              "title": "Projeto de estrutura de um servidor web implementando normas e protocolos de segurança segundo o projeto Open Standards Everywhere",
-              "authors": "Raphaela Silva Goulart, Silvia Calmon de Albuquerque",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17346"
-            },
-            {
-              "title": "Análise de variantes do criptossistema McEliece e da versão candidata a padrão de encriptação baseada em códigos",
-              "authors": "Guilherme G. Martinez, Denise Hideko Goya",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17347"
-            },
-            {
-              "title": "WebGoat Plus: Uma Extensão da Ferramenta WebGoat",
-              "authors": "Artur Ricardo Bizon, Gilvan Justino",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17348"
-            },
-            {
-              "title": "Análise de segurança dos orquestradores Kubernetes, Docker Swarm e Apache Mesos baseada no CVE / MITRE",
-              "authors": "Nikolas Jensen, Charles Christian Miers",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17349"
-            },
-            {
-              "title": "Uma análise dos dados provenientes de vazamentos disponíveis para venda em marketplaces da dark web",
-              "authors": "Kelvin Lopes, Luciano Ignaczak",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17350"
-            },
-            {
-              "title": "Enumeração de sistemas operacionais e serviços de firmwares de roteadores sem-fio",
-              "authors": "Gianluigi Dal Toso, Lourenço Alves Pereira Júnior",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17351"
-            },
-            {
-              "title": "Uma Abordagem para Redução do Tamanho de Shellcodes sem Comprometimento do Comportamento",
-              "authors": "Geyslan Gregório Bem, Guilherme Álvaro Rodrigues Maia Esmeraldo",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17352"
-            },
-            {
-              "title": "Estudos de otimização do algoritmo de criptografia pós-quântica CRYSTALS-KYBER",
-              "authors": "Luiz F. C. Ferro, Felipe J. A. Rampazzo, Marco A. A. Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17353"
-            },
-            {
-              "title": "Atualização de Firmware em Sistemas Embarcados de Forma Segura e Confiável",
-              "authors": "Paulo Fylippe Sell, Emerson Ribeiro de Mello, Roberto de Matos",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17354"
-            },
-            {
-              "title": "Transações OP_RETURN: uma oportunidade de análise forense",
-              "authors": "Luis Benito Sanches Bulhões, Ivan Sendin, Rodrigo Sanches Miani",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17355"
-            },
-            {
-              "title": "Permissões Android para Detecção de Malwares: Um Estudo Preliminar",
-              "authors": "Joner Assolin, Guilherme Siqueira, Gustavo Rodrigues, Diego Kreutz",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17356"
-            },
-            {
-              "title": "Análise de Desempenho de uma Ferramenta para Visualização de Hashes em Dispositivos Móveis",
-              "authors": "Henrique Araújo de Carvalho, Jorge Miguel Ribeiro, Daniel Macêdo Batista, José Coelho de Pina",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17357"
-            },
-            {
-              "title": "Um estudo de caso sobre a implantação de um ambiente de prevenção de intrusões com a ferramenta Suricata",
-              "authors": "Gabriel Marvel Vaz, Tiago Antonio Rizzetti, Walter Priesnitz Filho",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17358"
-            },
-            {
-              "title": "Proposta de avaliação do desempenho de um mecanismo de consenso probabilístico baseado em Proof-of-Stake para blockchains públicas",
-              "authors": "Felipe Benedet da Silva, Diego Fernandes Gonçalves Martins, Marco Aurelio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17359"
-            },
-            {
-              "title": "Aprimorando o uso de Links em API Contract",
-              "authors": "Richard Lucas Lima Auzier, Ailton Santos Filho, Eduardo L. Feitosa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17360"
-            },
-            {
-              "title": "Avaliando Modelos de Graph Neural Networks para Detecção de Usuários Fraudulentos em e-Commerce",
-              "authors": "Larissa de Andrade Silva, Eduardo L. Feitosa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17361"
-            }
-          ]
-        }
-      ]
-    },
-    {
+      "key": "USP",
+      "name": "Universidade de São Paulo",
       "city": "São Paulo",
       "uf": "SP",
-      "lat": -23.55,
-      "lng": -46.633,
-      "total": 16,
-      "editions": [
+      "lat": -23.5595,
+      "lng": -46.7313,
+      "paper_count": 7,
+      "papers": [
         {
-          "year": 2019,
-          "n": 16,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/692",
-          "papers": [
-            {
-              "title": "Uma Avaliação das plataformas de denúncia de Phishing: uma análise da plataforma PhishTank",
-              "authors": "Lucas Teixeira, Carlo da Silva",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14002"
-            },
-            {
-              "title": "Aplicabilidade e Impactos quanto a Adoção de Modelos de Classiﬁcação como Mecanismos Anti-phishing.",
-              "authors": "Mateus de Barros, Carlo da Silva, Péricles de Miranda",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14003"
-            },
-            {
-              "title": "An investigation of genetic algorithm-based feature selection techniques applied to keystroke dynamics biometrics",
-              "authors": "Tuany Mariah do Nascimento, Andrelyne Vitória de Oliveira, Márjory Abreu, Laura Emmanuella Santana",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14004"
-            },
-            {
-              "title": "Machine Learning for Malware Detection: Beyond Accuracy Rates",
-              "authors": "Lucas Galante, Marcus Botacin, André Grégio, Paulo de Geus",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14005"
-            },
-            {
-              "title": "Entendimento dos Controles e Possíveis Conflitos de Privacidade nas Redes Sociais Online",
-              "authors": "Talita Costa, Marbilia Sergio, Regina Marin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14006"
-            },
-            {
-              "title": "A Implementação de um Protocolo Criptográﬁco para Geração Distribuída de Credenciais no Sistema CIVIS",
-              "authors": "Matheus de Sá, Roberto Araújo",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14007"
-            },
-            {
-              "title": "Hash Criptográﬁco sobre Senhas e Aleatoriedade do Argon2∗",
-              "authors": "Pietro Gregório, Denise Goya",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14008"
-            },
-            {
-              "title": "PhishKiller: Uma Ferramenta para Detecção e Mitigação de Ataques de Phishing Através de Técnicas de Deep Learning",
-              "authors": "Cristian Souza, Marcilio Lemos, Felipe Silva, Robinson Alves",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14009"
-            },
-            {
-              "title": "Algoritmos de Assinatura Digital Baseada em Reticulados Candidatos a Padrão Pós-Quântico",
-              "authors": "Guilherme Belarmino, Denise Goya",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14010"
-            },
-            {
-              "title": "Aprimorando a Segurança do Sistema de Votação CIVIS através da Geração Distribuída de Credenciais",
-              "authors": "Alberto Sobrinho, Roberto Araújo",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14011"
-            },
-            {
-              "title": "Autenticação baseada em ondas eletromagnéticas",
-              "authors": "Ivo Carlson, Max Gonzaga, Leonardo Oliveira, Heitor Ramos",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14012"
-            },
-            {
-              "title": "Uma Análise Forense de Carteiras Eletrônicas Móveis com Foco na Comprovação da Autoria de Crime Cibernético",
-              "authors": "Felipe de Marins, Luciano Ignaczak",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14013"
-            },
-            {
-              "title": "Solução para habilitar conversas integras e auditáveis em aplicativos de troca de mensagens instantâneas",
-              "authors": "Andrea Komo, Marcos Simplicio Jr.",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14014"
-            },
-            {
-              "title": "Uma Arquitetura para Comunicação Espontânea e Segura para Internet das Coisas Móveis em Cidades Inteligentes",
-              "authors": "Gabriel Leopoldino, Ricardo da Rocha",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14015"
-            },
-            {
-              "title": "Tocker: framework para a segurança de containers Docker",
-              "authors": "Felipe Balabanian, Marco Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14016"
-            },
-            {
-              "title": "Capture The Flag: Método de Aprendizado para a Disciplina de Forense Computacional em uma Universidade Pública",
-              "authors": "Carlos Eduardo Santos Júnior, Ana Clara Mendes, Jhonattan Cabral, Juliana dos Santos, Erick Silva, Pedro Emerick",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14017"
-            }
-          ]
+          "title": "Avaliação de desempenho e segurança de diferentes implementações do sistema de criptografia RSA",
+          "authors": "Ana Carla Quallio Rosa, Rodrigo Campiolo, Daniel Macêdo Batista",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36757",
+          "year": 2025
+        },
+        {
+          "title": "Fuzzing para o Protocolo TLS: Estado da Arte e Comparação de Fuzzers Existentes",
+          "authors": "Filipe T. Velozo, Thiago D. Ferreira, Eduardo F. Pacheco, Renan C. A. Alves, Marcos A. Simplicio Jr., Bruno C. Albertini, Daniel M. Batista",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27306",
+          "year": 2023
+        },
+        {
+          "title": "Modelagem das Áreas de Risco de Sistemas de Detecção de Intrusão para Cálculo de Métricas de Privacidade",
+          "authors": "Jessica Yumi Nakano Sato, Daniel Macêdo Batista",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27299",
+          "year": 2023
+        },
+        {
+          "title": "Segurança em Internet das Coisas: Uma Análise de Comportamento de Rede sob Ataque",
+          "authors": "Alexandre M. Carrer, Cíntia B. Margi",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27291",
+          "year": 2023
+        },
+        {
+          "title": "Utilização de Animações para Comparação de Hashes em Votação Eletrônica via Internet",
+          "authors": "Jessica Yumi Nakano Sato, Jorge Miguel Ribeiro, Roberto Samarone Araujo, José Coelho de Pina, Daniel Macêdo Batista",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21715",
+          "year": 2022
+        },
+        {
+          "title": "Análise de Desempenho de uma Ferramenta para Visualização de Hashes em Dispositivos Móveis",
+          "authors": "Henrique Araújo de Carvalho, Jorge Miguel Ribeiro, Daniel Macêdo Batista, José Coelho de Pina",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17357",
+          "year": 2021
+        },
+        {
+          "title": "Solução para habilitar conversas integras e auditáveis em aplicativos de troca de mensagens instantâneas",
+          "authors": "Andrea Komo, Marcos Simplicio Jr.",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14014",
+          "year": 2019
         }
       ]
     },
     {
-      "city": "Foz do Iguaçu",
-      "uf": "PR",
-      "lat": -25.516,
-      "lng": -54.585,
-      "total": 14,
-      "editions": [
+      "key": "UFAM",
+      "name": "Universidade Federal do Amazonas",
+      "city": "Manaus",
+      "uf": "AM",
+      "lat": -3.0989,
+      "lng": -59.9648,
+      "paper_count": 6,
+      "papers": [
         {
-          "year": 2025,
-          "n": 14,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/1557",
-          "papers": [
-            {
-              "title": "An Analysis of Pre-trained Models to Identify Cybersecurity Incidents Entities in the Healthcare Industry",
-              "authors": "Rafael Paim, Luciano Ignaczak",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36753"
-            },
-            {
-              "title": "Aplicação de Redes Generativas em Detecção de Spam em Cibersegurança",
-              "authors": "Milena de Toledo Araujo, Kelton Augusto Pontara da Costa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36754"
-            },
-            {
-              "title": "Aplicação e Compliance da LGPD: Uma análise a partir da base de dados APDados no período de 2020 a 2024",
-              "authors": "Amanda L. Ilg, Jean Dalcin, Airton Zancanaro, Carlos Gouvea, Regina Marin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36755"
-            },
-            {
-              "title": "Avaliação comparativa do desempenho de inteligências artificiais generativas e ferramentas tradicionais na análise de código-fonte JavaScript",
-              "authors": "Rayane Pimentel, Claudia Bianchi Progetti",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36756"
-            },
-            {
-              "title": "Avaliação de desempenho e segurança de diferentes implementações do sistema de criptografia RSA",
-              "authors": "Ana Carla Quallio Rosa, Rodrigo Campiolo, Daniel Macêdo Batista",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36757"
-            },
-            {
-              "title": "Avaliação do Reconhecimento de Entidades Nomeadas para Descoberta de Dados Pessoais em Transcrições de Áudio",
-              "authors": "Carlos André Misiuk Munhos, Luciano Ignaczak",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36758"
-            },
-            {
-              "title": "Caracterização de Phishing com Grandes Modelos de Linguagem (LLMs): Uma Avaliação Comparativa entre Gemini, DeepSeek e ChatGPT",
-              "authors": "Evelyn E. B. Bustamante, Adriano M. Rocha, Silvio E. Quincozes, Juliano F. Kazienko, Vagner E. Quincozes",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36759"
-            },
-            {
-              "title": "Classificação de Malwares Android com Análise Dinâmica Segmentada e Estratégia Multivisualização",
-              "authors": "Ivson Ferreira, João Victor O. de Oliveira, Fernando Purkott, Jhonatan Geremias, Eduardo K. Viegas",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36760"
-            },
-            {
-              "title": "Estratégias de incentivo e ensino de comportamentos de cibersegurança: Relato de experiência em uma universidade",
-              "authors": "Paulo F. da Silva Júnior, Marcelo H. O. Henklain, Pedro V. da S. Ribeiro, João R. R. C. Cunha, Felipe L. Lobo, Eduardo L. Feitosa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36761"
-            },
-            {
-              "title": "Mapeamento Sistemático de Comparativos de Ferramentas de Análise Estática de Código com Foco na Segurança",
-              "authors": "Francisco Jean S. Sousa, João Gustavo I. Braga, Anna Beatriz V. Sousa, Valéria Lelli L. Dantas, Rossana M. C. Andrade, Ismayle S. Santos",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36762"
-            },
-            {
-              "title": "Regressão da eficácia de analisadores de vulnerabilidades em contratos inteligentes de blockchains",
-              "authors": "Rafael Santa Rosa Alves, Marco Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36763"
-            },
-            {
-              "title": "Revisão Multifocal sobre ferramentas de teste e estratégias de segurança de APIs em microsserviços",
-              "authors": "Ian José Soares Mendes, Lyanderson S. Rodrigues, Rubens A. da S. Sousa, Ismayle de S. Santos",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36764"
-            },
-            {
-              "title": "Segurança da Informação em Foco: Análise Curricular dos Cursos de Computação da Rede Federal no Sudeste do Brasil",
-              "authors": "Bruno Raphael Andrade Varjão Meireles, Lídia Bononi Paiva Tomaz",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36765"
-            },
-            {
-              "title": "Uma Abordagem Baseada em Big Data para Detecção de Intrusões com Aprendizado de Máquina sobre Dados de Múltiplos Domínios",
-              "authors": "Vinicius M. S. de Oliveira, Henrique M. S. de Oliveira, Gabriel M. Santos, Jhonatan Geremias, Eduardo K. Viegas",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36766"
-            }
-          ]
+          "title": "Estratégias de incentivo e ensino de comportamentos de cibersegurança: Relato de experiência em uma universidade",
+          "authors": "Paulo F. da Silva Júnior, Marcelo H. O. Henklain, Pedro V. da S. Ribeiro, João R. R. C. Cunha, Felipe L. Lobo, Eduardo L. Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36761",
+          "year": 2025
+        },
+        {
+          "title": "Avaliação da eficiência de jogo educativo para o ensino do comportamento de distinguir e-mails legítimos de tentativas de phishing",
+          "authors": "Jasson Marques Fontoura Júnior, Marcelo Henrique Oliveira Henklain, Felipe Leite Lobo, Eduardo Luzeiro Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30140",
+          "year": 2024
+        },
+        {
+          "title": "Construção e Teste de app gamificado gerador de senhas fortes e memoráveis: Um estudo exploratório em cibersegurança",
+          "authors": "Hugo Lima Romão, Marcelo Henrique Oliveira Henklain, Felipe Leite Lobo, Eduardo Luzeiro Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30143",
+          "year": 2024
+        },
+        {
+          "title": "iOSDBuilder: Uma Ferramenta de Construção de Datasets para Detecção de Malwares iOS",
+          "authors": "João Guilherme Freitas, Vanderson Rocha, Eduardo Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27290",
+          "year": 2023
+        },
+        {
+          "title": "Aprimorando o uso de Links em API Contract",
+          "authors": "Richard Lucas Lima Auzier, Ailton Santos Filho, Eduardo L. Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17360",
+          "year": 2021
+        },
+        {
+          "title": "Avaliando Modelos de Graph Neural Networks para Detecção de Usuários Fraudulentos em e-Commerce",
+          "authors": "Larissa de Andrade Silva, Eduardo L. Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17361",
+          "year": 2021
         }
       ]
     },
     {
-      "city": "Santa Maria",
-      "uf": "RS",
-      "lat": -29.685,
-      "lng": -53.807,
-      "total": 13,
-      "editions": [
+      "key": "UFPA",
+      "name": "Universidade Federal do Pará",
+      "city": "Belém",
+      "uf": "PA",
+      "lat": -1.4744,
+      "lng": -48.4526,
+      "paper_count": 6,
+      "papers": [
         {
-          "year": 2022,
-          "n": 13,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/985",
-          "papers": [
-            {
-              "title": "Análise de segurança em aplicações Web construídas a partir dos frameworks Django, Express e Flask",
-              "authors": "Rodrigo de Brito, Carlos André Batista de Carvalho",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21708"
-            },
-            {
-              "title": "EB-CyberDef: Um Ambiente Integrado de Defesa Cibernética para Apoio à Detecção e ao Combate de Comportamentos Maliciosos no Tráfego de Redes de Computadores",
-              "authors": "Gustavo A. Testoni, Marcos Paulo L. A. Pereira, Sérgio S. Cardoso, Clayton E. das Chagas, Ronaldo R. Goldschimidt",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21709"
-            },
-            {
-              "title": "Sandbox as a Service: automatizando a configuracão do Cuckoo Sandbox e a geração de dados para análise de malware",
-              "authors": "Guilherme V. Figueiredo, Renan G. Cattelan, Rodrigo S. Miani",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21710"
-            },
-            {
-              "title": "Avaliação de requisitos de processamento e memória do algoritmo de criptografia pós-quântica SABER em plataforma ARM Cortex-M0+",
-              "authors": "George Gigilas Junior, Marco A. A. Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21711"
-            },
-            {
-              "title": "A Vote Tallying System Based on Computer Vision",
-              "authors": "Paulo Victor Fernandes Sousa, Julio Cesar da Silva Rodrigues, Charles Figueredo de Barros",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21712"
-            },
-            {
-              "title": "Entendimento do Controle de TAGs nas Redes Sociais",
-              "authors": "Natanael Pereira, Laura Alves, Regina Marin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21713"
-            },
-            {
-              "title": "Análise de viabilidade de implantação de sistema de autenticação híbrido baseado em Identidades Digitais Federadas e Identidades Digitais Descentralizadas",
-              "authors": "Raquel Pereira Leite, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21714"
-            },
-            {
-              "title": "Utilização de Animações para Comparação de Hashes em Votação Eletrônica via Internet",
-              "authors": "Jessica Yumi Nakano Sato, Jorge Miguel Ribeiro, Roberto Samarone Araujo, José Coelho de Pina, Daniel Macêdo Batista",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21715"
-            },
-            {
-              "title": "Solução Integrada para Análise e Monitoramento de Redes Empresariais",
-              "authors": "Mateus Oliva Soares, Marcelo Marchioro Cordeiro, Erico Hoff do Amaral, Gabriel Haab",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21716"
-            },
-            {
-              "title": "DevSecOps - integração da segurança contínua em pipelines DevOps: um estudo de caso",
-              "authors": "Rafael Pio de França, Vinicius Barcelos da Silva",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21717"
-            },
-            {
-              "title": "Sistema de Votação Eletrônica baseado em Assinatura Cega e BigchainDB",
-              "authors": "Leonardo Pinto Guilherme, Luis Claudio Batista da Silva, Nilson Mori Lazarin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21718"
-            },
-            {
-              "title": "Demonstração Experimental de Vulnerabilidades em Dispositivos Internet das Coisas",
-              "authors": "Raphael L. C. Nascimento, Ryan M. S. Leal, Iguatemi E. Fonseca",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21719"
-            },
-            {
-              "title": "Uma proposta para avaliacção de confiança em redes VANETs",
-              "authors": "Eduardo Pandini, Fernando Menezes Matos, Aldri Santos, Adriano Fiorese",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21720"
-            }
-          ]
+          "title": "Uma Proposta de Integração da Biblioteca Criptográfica do Sistema Helios ao Sistema Civis",
+          "authors": "Paula Rosene dos Santos, Roberto Samarone Araujo",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30147",
+          "year": 2024
+        },
+        {
+          "title": "Detecção de Ataques DDoS em Redes SDN Utilizando Aprendizado de Máquina: Uma Abordagem em Microsserviços",
+          "authors": "Victor Dias, Murilo Silva, Matheus Gomes, Lucas B. Oliveira, Diego Abreu, João Ferreira, Antônio Abelém",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27287",
+          "year": 2023
+        },
+        {
+          "title": "Utilização de Animações para Comparação de Hashes em Votação Eletrônica via Internet",
+          "authors": "Jessica Yumi Nakano Sato, Jorge Miguel Ribeiro, Roberto Samarone Araujo, José Coelho de Pina, Daniel Macêdo Batista",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21715",
+          "year": 2022
+        },
+        {
+          "title": "Agentes de Análise e Detecção de Ataques Ransomware em Sistemas Linux",
+          "authors": "Cryslene Coêlho De Oliveira Miranda, Caio Carvalho Moreira, Otávio Noura Teixeira",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19286",
+          "year": 2020
+        },
+        {
+          "title": "A Implementação de um Protocolo Criptográﬁco para Geração Distribuída de Credenciais no Sistema CIVIS",
+          "authors": "Matheus de Sá, Roberto Araújo",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14007",
+          "year": 2019
+        },
+        {
+          "title": "Aprimorando a Segurança do Sistema de Votação CIVIS através da Geração Distribuída de Credenciais",
+          "authors": "Alberto Sobrinho, Roberto Araújo",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14011",
+          "year": 2019
         }
       ]
     },
     {
-      "city": "Petrópolis",
+      "key": "UFF",
+      "name": "Universidade Federal Fluminense",
+      "city": "Niterói",
       "uf": "RJ",
-      "lat": -22.505,
-      "lng": -43.178,
-      "total": 13,
-      "editions": [
+      "lat": -22.8969,
+      "lng": -43.1266,
+      "paper_count": 5,
+      "papers": [
         {
-          "year": 2020,
-          "n": 13,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/895",
-          "papers": [
-            {
-              "title": "Proposta de Carimbo do Tempo Descentralizado e Preciso para a ICP-Brasil utilizando Sistemas Embarcados e Criptografia Pós-Quântica",
-              "authors": "Gabriel Estevam, Martín Vigil",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19281"
-            },
-            {
-              "title": "Identificação de Ameaças relacionadas a Medidores de Glicose",
-              "authors": "Fernando Homem da Costa, Lucila Maria de Souza Bento, Noemi Rodriguez",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19282"
-            },
-            {
-              "title": "Detecção de Anomalias: Estudo de Técnicas de Identificação de Ataques em um Ambiente de Contêiner",
-              "authors": "Gabriel Ruschel Castanhel, Tiago Heinrich, Fabrício Ceschin, Carlos A. Maziero",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19283"
-            },
-            {
-              "title": "Provendo controle de acesso para o Sistema de Telessaúde Holográfico da UFF através de um protocolo de autenticação de três fatores",
-              "authors": "Nicolas F. M. da Silva, Natalia C. Fernandes",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19284"
-            },
-            {
-              "title": "Document Validation using Blockchain A validation scheme for natural person’s documents",
-              "authors": "João V. Meyer, Lucas M. Palma, Jean E. Martina",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19285"
-            },
-            {
-              "title": "Agentes de Análise e Detecção de Ataques Ransomware em Sistemas Linux",
-              "authors": "Cryslene Coêlho De Oliveira Miranda, Caio Carvalho Moreira, Otávio Noura Teixeira",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19286"
-            },
-            {
-              "title": "Towards to fair trade with item validation using Bloom Filters and Smart Contracts",
-              "authors": "Matheus Cunha Reis, Ivan da Silva Sendin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19287"
-            },
-            {
-              "title": "Exploring the use of machine learning outlier detection algorithms for DDoS identification",
-              "authors": "André L. Ribeiro, Othávio R. C. Araújo, Caio A. C. Maciel, Leonardo B. Oliveira",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19288"
-            },
-            {
-              "title": "Smart Contracts como uma plataforma para computação segura",
-              "authors": "Bianca Cristina da Silva, Ivan da Silva Sendin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19289"
-            },
-            {
-              "title": "Ferramenta de monitoramento gráfico para suporte à criação e testes de novos mecanismos de consenso em blockchains",
-              "authors": "Bryan Wolff, Diego Fernandes Gonçalves Martins, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19290"
-            },
-            {
-              "title": "Uma comparação de desempenho de algoritmos para criptografia pós-quântica",
-              "authors": "Pedro Rubbioli Amorim, Marco A. A. Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19291"
-            },
-            {
-              "title": "Avaliação dos requisitos de tempo e espaço de assinaturas digitais stateful baseadas em funções hash para blockchains",
-              "authors": "José Augusto A. G. de M. Braga, Marco A. A. Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19292"
-            },
-            {
-              "title": "Estudo comparativo de desempenho em Assinaturas Digitais Pós-Quânticas para plataformas de IoT",
-              "authors": "Vitor Nagata, Marco A. A. Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19293"
-            }
-          ]
+          "title": "Caracterização de Phishing com Grandes Modelos de Linguagem (LLMs): Uma Avaliação Comparativa entre Gemini, DeepSeek e ChatGPT",
+          "authors": "Evelyn E. B. Bustamante, Adriano M. Rocha, Silvio E. Quincozes, Juliano F. Kazienko, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36759",
+          "year": 2025
+        },
+        {
+          "title": "Proteção de Dados e Conformidade Legal: Uma revisão de Ferramentas, Práticas de Segurança e Direções Futuras",
+          "authors": "Camilla C. B. Quincozes, Ketrin Vargas, Silvio E. Quincozes, César Murilo Silva Jr., Rafael D. Araújo, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30145",
+          "year": 2024
+        },
+        {
+          "title": "BOU-Guard: Uma Abordagem para Detecção de Conteúdo Impróprio na Internet",
+          "authors": "Guilherme Bou, Adriano M. Rocha, Vagner E. Quincozes, Silvio E. Quincozes, Juliano F. Kazienko",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27303",
+          "year": 2023
+        },
+        {
+          "title": "Secflow: Aprendizado não supervisionado para análise e detecção de anomalias em Redes de Computadores",
+          "authors": "Felipe M. Salles, Taiane C. Ramos, Luiz Claudio Schara",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27297",
+          "year": 2023
+        },
+        {
+          "title": "Provendo controle de acesso para o Sistema de Telessaúde Holográfico da UFF através de um protocolo de autenticação de três fatores",
+          "authors": "Nicolas F. M. da Silva, Natalia C. Fernandes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19284",
+          "year": 2020
         }
       ]
     },
     {
+      "key": "UNIPAMPA",
+      "name": "Universidade Federal do Pampa",
+      "city": "Bagé",
+      "uf": "RS",
+      "lat": -31.3297,
+      "lng": -54.1069,
+      "paper_count": 5,
+      "papers": [
+        {
+          "title": "Caracterização de Phishing com Grandes Modelos de Linguagem (LLMs): Uma Avaliação Comparativa entre Gemini, DeepSeek e ChatGPT",
+          "authors": "Evelyn E. B. Bustamante, Adriano M. Rocha, Silvio E. Quincozes, Juliano F. Kazienko, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36759",
+          "year": 2025
+        },
+        {
+          "title": "Proteção de Dados e Conformidade Legal: Uma revisão de Ferramentas, Práticas de Segurança e Direções Futuras",
+          "authors": "Camilla C. B. Quincozes, Ketrin Vargas, Silvio E. Quincozes, César Murilo Silva Jr., Rafael D. Araújo, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30145",
+          "year": 2024
+        },
+        {
+          "title": "BOU-Guard: Uma Abordagem para Detecção de Conteúdo Impróprio na Internet",
+          "authors": "Guilherme Bou, Adriano M. Rocha, Vagner E. Quincozes, Silvio E. Quincozes, Juliano F. Kazienko",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27303",
+          "year": 2023
+        },
+        {
+          "title": "Solução Integrada para Análise e Monitoramento de Redes Empresariais",
+          "authors": "Mateus Oliva Soares, Marcelo Marchioro Cordeiro, Erico Hoff do Amaral, Gabriel Haab",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21716",
+          "year": 2022
+        },
+        {
+          "title": "Permissões Android para Detecção de Malwares: Um Estudo Preliminar",
+          "authors": "Joner Assolin, Guilherme Siqueira, Gustavo Rodrigues, Diego Kreutz",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17356",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "UFPR",
+      "name": "Universidade Federal do Paraná",
+      "city": "Curitiba",
+      "uf": "PR",
+      "lat": -25.4269,
+      "lng": -49.261,
+      "paper_count": 5,
+      "papers": [
+        {
+          "title": "Análise Exploratória de Atributos Textuais em Bases de Dados para Identificação de Campos Sensíveis",
+          "authors": "Bruno H. Labres, André Grégio, Fabiano Silva",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17365",
+          "year": 2021
+        },
+        {
+          "title": "Detecção de Anomalias: Estudo de Técnicas de Identificação de Ataques em um Ambiente de Contêiner",
+          "authors": "Gabriel Ruschel Castanhel, Tiago Heinrich, Fabrício Ceschin, Carlos A. Maziero",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19283",
+          "year": 2020
+        },
+        {
+          "title": "Machine Learning for Malware Detection: Beyond Accuracy Rates",
+          "authors": "Lucas Galante, Marcus Botacin, André Grégio, Paulo de Geus",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14005",
+          "year": 2019
+        },
+        {
+          "title": "Large Scale Studies: Malware Needles in a Haystack",
+          "authors": "Giovanni Bertão, Marcus Botacin, André Grégio, Paulo Lício de Geus",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4159",
+          "year": 2018
+        },
+        {
+          "title": "Malicious Linux Binaries: A Landscape",
+          "authors": "Lucas Galante, Marcus Botacin, André Grégio, Paulo Lício de Geus",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4160",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "UFRN",
+      "name": "Universidade Federal do Rio Grande do Norte",
       "city": "Natal",
       "uf": "RN",
-      "lat": -5.795,
-      "lng": -35.209,
-      "total": 13,
-      "editions": [
+      "lat": -5.8433,
+      "lng": -35.1997,
+      "paper_count": 5,
+      "papers": [
         {
-          "year": 2018,
-          "n": 13,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/277",
-          "papers": [
-            {
-              "title": "Análise e comparação de algoritmos criptográficos simétricos embarcados na plataforma Arduino",
-              "authors": "João Victor Guinelli, Octavio Vieira Aguiar, Nilson Mori Lazarin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4153"
-            },
-            {
-              "title": "On-block certs: blockchain-based lightweight digital certificates",
-              "authors": "Nícolas F. R. A. Prado, Marco A. A. Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4154"
-            },
-            {
-              "title": "Smart Rescue Drones to Find Snowslide Victims",
-              "authors": "Raul S. Silva, Márjory Da Costa-Abreu",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4155"
-            },
-            {
-              "title": "Construção de Conjunto de Classificadores Baseado na Diversidade do Espaço de Características e Algoritmos de Aprendizagem para Detecção de Spam",
-              "authors": "Gabriel P. Lutz, Lucas Ost, Márcia Henke",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4156"
-            },
-            {
-              "title": "Click Fraud Detection and Prevention System For Ad Networks",
-              "authors": "Paulo S. de Almeida, João J. C. Gondim",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4157"
-            },
-            {
-              "title": "Ambiente para Análise e Geração de Inteligência de Ameaças usando Fontes Abertas",
-              "authors": "José Valdy Campelo Júnior, João José Costa Gondim",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4158"
-            },
-            {
-              "title": "Large Scale Studies: Malware Needles in a Haystack",
-              "authors": "Giovanni Bertão, Marcus Botacin, André Grégio, Paulo Lício de Geus",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4159"
-            },
-            {
-              "title": "Malicious Linux Binaries: A Landscape",
-              "authors": "Lucas Galante, Marcus Botacin, André Grégio, Paulo Lício de Geus",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4160"
-            },
-            {
-              "title": "Aperfeiçoamento da ferramenta sdhash para identificação de artefatos similares em investigações forenses",
-              "authors": "André Seiki Kameyama, Vitor Hugo Galhardo Moia, Marco Aurelio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4161"
-            },
-            {
-              "title": "Primeiros passos para o Desenvolvimento Seguro de Aplicações Web",
-              "authors": "Lucas Souza Montanheiro, Ana Maria Martins Carvalho",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4162"
-            },
-            {
-              "title": "Aprimorando o simulador Simbo para testes de botnets avançadas",
-              "authors": "Fábio Harada Kubo, Moisés Danziger, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4163"
-            },
-            {
-              "title": "Integração de Detecção de Intrusão em Redes Definidas Por Software",
-              "authors": "Laura Dalpissol, Cleverton J. A. Vicentini, Altair Olivo Santin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4164"
-            },
-            {
-              "title": "Interface Gráfica Web para Gerência de Usuários e Permissões de Acesso na Plataforma FIWARE",
-              "authors": "Irene Ginani Costa Pinheiro, Carlos Eduardo da Silva",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4165"
-            }
-          ]
+          "title": "An investigation of genetic algorithm-based feature selection techniques applied to keystroke dynamics biometrics",
+          "authors": "Tuany Mariah do Nascimento, Andrelyne Vitória de Oliveira, Márjory Abreu, Laura Emmanuella Santana",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14004",
+          "year": 2019
+        },
+        {
+          "title": "Capture The Flag: Método de Aprendizado para a Disciplina de Forense Computacional em uma Universidade Pública",
+          "authors": "Carlos Eduardo Santos Júnior, Ana Clara Mendes, Jhonattan Cabral, Juliana dos Santos, Erick Silva, Pedro Emerick",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14017",
+          "year": 2019
+        },
+        {
+          "title": "PhishKiller: Uma Ferramenta para Detecção e Mitigação de Ataques de Phishing Através de Técnicas de Deep Learning",
+          "authors": "Cristian Souza, Marcilio Lemos, Felipe Silva, Robinson Alves",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14009",
+          "year": 2019
+        },
+        {
+          "title": "Interface Gráfica Web para Gerência de Usuários e Permissões de Acesso na Plataforma FIWARE",
+          "authors": "Irene Ginani Costa Pinheiro, Carlos Eduardo da Silva",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4165",
+          "year": 2018
+        },
+        {
+          "title": "Smart Rescue Drones to Find Snowslide Victims",
+          "authors": "Raul S. Silva, Márjory Da Costa-Abreu",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4155",
+          "year": 2018
         }
       ]
     },
     {
+      "key": "PUCPR",
+      "name": "Pontifícia Universidade Católica do Paraná",
+      "city": "Curitiba",
+      "uf": "PR",
+      "lat": -25.4506,
+      "lng": -49.23,
+      "paper_count": 4,
+      "papers": [
+        {
+          "title": "Classificação de Malwares Android com Análise Dinâmica Segmentada e Estratégia Multivisualização",
+          "authors": "Ivson Ferreira, João Victor O. de Oliveira, Fernando Purkott, Jhonatan Geremias, Eduardo K. Viegas",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36760",
+          "year": 2025
+        },
+        {
+          "title": "Uma Abordagem Baseada em Big Data para Detecção de Intrusões com Aprendizado de Máquina sobre Dados de Múltiplos Domínios",
+          "authors": "Vinicius M. S. de Oliveira, Henrique M. S. de Oliveira, Gabriel M. Santos, Jhonatan Geremias, Eduardo K. Viegas",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36766",
+          "year": 2025
+        },
+        {
+          "title": "Seleção de Características Multiobjetivo para Detecção de Malwares Android",
+          "authors": "Philipe Fransozi, Jhonatan Geremias, Eduardo K. Viegas, Altair O. Santin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30146",
+          "year": 2024
+        },
+        {
+          "title": "Integração de Detecção de Intrusão em Redes Definidas Por Software",
+          "authors": "Laura Dalpissol, Cleverton J. A. Vicentini, Altair Olivo Santin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4164",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "UFSM",
+      "name": "Universidade Federal de Santa Maria",
+      "city": "Santa Maria",
+      "uf": "RS",
+      "lat": -29.7178,
+      "lng": -53.7159,
+      "paper_count": 4,
+      "papers": [
+        {
+          "title": "Caracterização de Phishing com Grandes Modelos de Linguagem (LLMs): Uma Avaliação Comparativa entre Gemini, DeepSeek e ChatGPT",
+          "authors": "Evelyn E. B. Bustamante, Adriano M. Rocha, Silvio E. Quincozes, Juliano F. Kazienko, Vagner E. Quincozes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36759",
+          "year": 2025
+        },
+        {
+          "title": "BOU-Guard: Uma Abordagem para Detecção de Conteúdo Impróprio na Internet",
+          "authors": "Guilherme Bou, Adriano M. Rocha, Vagner E. Quincozes, Silvio E. Quincozes, Juliano F. Kazienko",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27303",
+          "year": 2023
+        },
+        {
+          "title": "Um estudo de caso sobre a implantação de um ambiente de prevenção de intrusões com a ferramenta Suricata",
+          "authors": "Gabriel Marvel Vaz, Tiago Antonio Rizzetti, Walter Priesnitz Filho",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17358",
+          "year": 2021
+        },
+        {
+          "title": "Construção de Conjunto de Classificadores Baseado na Diversidade do Espaço de Características e Algoritmos de Aprendizagem para Detecção de Spam",
+          "authors": "Gabriel P. Lutz, Lucas Ost, Márcia Henke",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4156",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "UFABC",
+      "name": "Universidade Federal do ABC",
+      "city": "Santo André",
+      "uf": "SP",
+      "lat": -23.644,
+      "lng": -46.5286,
+      "paper_count": 4,
+      "papers": [
+        {
+          "title": "Comparativo de técnicas de inteligência artificial explicável na detecção de fraudes em transações com cartão de crédito",
+          "authors": "Gabriel Mendes de Lima, Paulo Henrique Pisani",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30142",
+          "year": 2024
+        },
+        {
+          "title": "Análise de variantes do criptossistema McEliece e da versão candidata a padrão de encriptação baseada em códigos",
+          "authors": "Guilherme G. Martinez, Denise Hideko Goya",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17347",
+          "year": 2021
+        },
+        {
+          "title": "Algoritmos de Assinatura Digital Baseada em Reticulados Candidatos a Padrão Pós-Quântico",
+          "authors": "Guilherme Belarmino, Denise Goya",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14010",
+          "year": 2019
+        },
+        {
+          "title": "Hash Criptográﬁco sobre Senhas e Aleatoriedade do Argon2∗",
+          "authors": "Pietro Gregório, Denise Goya",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14008",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UNISINOS",
+      "name": "Universidade do Vale do Rio dos Sinos",
+      "city": "São Leopoldo",
+      "uf": "RS",
+      "lat": -29.7939,
+      "lng": -51.1531,
+      "paper_count": 4,
+      "papers": [
+        {
+          "title": "An Analysis of Pre-trained Models to Identify Cybersecurity Incidents Entities in the Healthcare Industry",
+          "authors": "Rafael Paim, Luciano Ignaczak",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36753",
+          "year": 2025
+        },
+        {
+          "title": "Avaliação do Reconhecimento de Entidades Nomeadas para Descoberta de Dados Pessoais em Transcrições de Áudio",
+          "authors": "Carlos André Misiuk Munhos, Luciano Ignaczak",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36758",
+          "year": 2025
+        },
+        {
+          "title": "Uma análise dos dados provenientes de vazamentos disponíveis para venda em marketplaces da dark web",
+          "authors": "Kelvin Lopes, Luciano Ignaczak",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17350",
+          "year": 2021
+        },
+        {
+          "title": "Uma Análise Forense de Carteiras Eletrônicas Móveis com Foco na Comprovação da Autoria de Crime Cibernético",
+          "authors": "Felipe de Marins, Luciano Ignaczak",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14013",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "CEFET-MG",
+      "name": "CEFET/MG",
+      "city": "Belo Horizonte",
+      "uf": "MG",
+      "lat": -19.9227,
+      "lng": -43.937,
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "Framework de autenticação web via reconhecimento facial",
+          "authors": "Samuel F. Santos, Mateus Tymburibá",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27293",
+          "year": 2023
+        },
+        {
+          "title": "Instrumentação de programas binários legados para compatibilização com Intel CET",
+          "authors": "Éverton C. Araújo, Mateus Tymburibá, Andrei Rimsa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27292",
+          "year": 2023
+        },
+        {
+          "title": "Projeto de estrutura de um servidor web implementando normas e protocolos de segurança segundo o projeto Open Standards Everywhere",
+          "authors": "Raphaela Silva Goulart, Silvia Calmon de Albuquerque",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17346",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "UECE",
+      "name": "Universidade Estadual do Ceará",
+      "city": "Fortaleza",
+      "uf": "CE",
+      "lat": -3.7906,
+      "lng": -38.556,
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "Mapeamento Sistemático de Comparativos de Ferramentas de Análise Estática de Código com Foco na Segurança",
+          "authors": "Francisco Jean S. Sousa, João Gustavo I. Braga, Anna Beatriz V. Sousa, Valéria Lelli L. Dantas, Rossana M. C. Andrade, Ismayle S. Santos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36762",
+          "year": 2025
+        },
+        {
+          "title": "Revisão Multifocal sobre ferramentas de teste e estratégias de segurança de APIs em microsserviços",
+          "authors": "Ian José Soares Mendes, Lyanderson S. Rodrigues, Rubens A. da S. Sousa, Ismayle de S. Santos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36764",
+          "year": 2025
+        },
+        {
+          "title": "Uma Abordagem para Testes de Segurança em Aplicações Android",
+          "authors": "Leonardo O. Silva, Emanuel B. Rodrigues, Ismayle de S. Santos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27294",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "key": "UFPB",
+      "name": "Universidade Federal da Paraíba",
+      "city": "João Pessoa",
+      "uf": "PB",
+      "lat": -7.1381,
+      "lng": -34.845,
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "Automação e Cibersegurança: Criando uma Ferramenta de Testes para Redes SDN",
+          "authors": "Ryan M. S. Leal, Johan K. E. Freitas, Francisco A. C. Albuquerque Júnior, Waslon T. A. Lopes, Fabrício B. S. Carvalho, Iguatemi E. Fonseca",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30139",
+          "year": 2024
+        },
+        {
+          "title": "Demonstração Experimental de Vulnerabilidades em Dispositivos Internet das Coisas",
+          "authors": "Raphael L. C. Nascimento, Ryan M. S. Leal, Iguatemi E. Fonseca",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21719",
+          "year": 2022
+        },
+        {
+          "title": "Uma proposta para avaliacção de confiança em redes VANETs",
+          "authors": "Eduardo Pandini, Fernando Menezes Matos, Aldri Santos, Adriano Fiorese",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21720",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "key": "UFMG",
+      "name": "Universidade Federal de Minas Gerais",
+      "city": "Belo Horizonte",
+      "uf": "MG",
+      "lat": -19.8703,
+      "lng": -43.9647,
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "Uma proposta para avaliacção de confiança em redes VANETs",
+          "authors": "Eduardo Pandini, Fernando Menezes Matos, Aldri Santos, Adriano Fiorese",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21720",
+          "year": 2022
+        },
+        {
+          "title": "Exploring the use of machine learning outlier detection algorithms for DDoS identification",
+          "authors": "André L. Ribeiro, Othávio R. C. Araújo, Caio A. C. Maciel, Leonardo B. Oliveira",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19288",
+          "year": 2020
+        },
+        {
+          "title": "Autenticação baseada em ondas eletromagnéticas",
+          "authors": "Ivo Carlson, Max Gonzaga, Leonardo Oliveira, Heitor Ramos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14012",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UFRR",
+      "name": "Universidade Federal de Roraima",
+      "city": "Boa Vista",
+      "uf": "RR",
+      "lat": 2.846,
+      "lng": -60.6716,
+      "paper_count": 3,
+      "papers": [
+        {
+          "title": "Estratégias de incentivo e ensino de comportamentos de cibersegurança: Relato de experiência em uma universidade",
+          "authors": "Paulo F. da Silva Júnior, Marcelo H. O. Henklain, Pedro V. da S. Ribeiro, João R. R. C. Cunha, Felipe L. Lobo, Eduardo L. Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36761",
+          "year": 2025
+        },
+        {
+          "title": "Avaliação da eficiência de jogo educativo para o ensino do comportamento de distinguir e-mails legítimos de tentativas de phishing",
+          "authors": "Jasson Marques Fontoura Júnior, Marcelo Henrique Oliveira Henklain, Felipe Leite Lobo, Eduardo Luzeiro Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30140",
+          "year": 2024
+        },
+        {
+          "title": "Construção e Teste de app gamificado gerador de senhas fortes e memoráveis: Um estudo exploratório em cibersegurança",
+          "authors": "Hugo Lima Romão, Marcelo Henrique Oliveira Henklain, Felipe Leite Lobo, Eduardo Luzeiro Feitosa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30143",
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "key": "IF Goiano",
+      "name": "Instituto Federal Goiano",
+      "city": "Goiânia",
+      "uf": "GO",
+      "lat": -16.6799,
+      "lng": -49.255,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Entendimento do Controle de TAGs nas Redes Sociais",
+          "authors": "Natanael Pereira, Laura Alves, Regina Marin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21713",
+          "year": 2022
+        },
+        {
+          "title": "Primeiros passos para o Desenvolvimento Seguro de Aplicações Web",
+          "authors": "Lucas Souza Montanheiro, Ana Maria Martins Carvalho",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4162",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "IFSC",
+      "name": "Instituto Federal de Santa Catarina",
+      "city": "Florianópolis",
+      "uf": "SC",
+      "lat": -27.5969,
+      "lng": -48.5495,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Entendimento do Controle de TAGs nas Redes Sociais",
+          "authors": "Natanael Pereira, Laura Alves, Regina Marin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21713",
+          "year": 2022
+        },
+        {
+          "title": "Atualização de Firmware em Sistemas Embarcados de Forma Segura e Confiável",
+          "authors": "Paulo Fylippe Sell, Emerson Ribeiro de Mello, Roberto de Matos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17354",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "UFSC",
+      "name": "Universidade Federal de Santa Catarina",
+      "city": "Florianópolis",
+      "uf": "SC",
+      "lat": -27.6006,
+      "lng": -48.5197,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Document Validation using Blockchain A validation scheme for natural person’s documents",
+          "authors": "João V. Meyer, Lucas M. Palma, Jean E. Martina",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19285",
+          "year": 2020
+        },
+        {
+          "title": "Proposta de Carimbo do Tempo Descentralizado e Preciso para a ICP-Brasil utilizando Sistemas Embarcados e Criptografia Pós-Quântica",
+          "authors": "Gabriel Estevam, Martín Vigil",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19281",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "key": "UFSJ",
+      "name": "Universidade Federal de São João del-Rei",
+      "city": "São João del-Rei",
+      "uf": "MG",
+      "lat": -21.1355,
+      "lng": -44.26,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "A coercion-resistant online voting protocol based on blind signatures and fake credentials",
+          "authors": "Vítor Rezende Silva, Charles F. de Barros",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27298",
+          "year": 2023
+        },
+        {
+          "title": "A Vote Tallying System Based on Computer Vision",
+          "authors": "Paulo Victor Fernandes Sousa, Julio Cesar da Silva Rodrigues, Charles Figueredo de Barros",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21712",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "key": "UFC",
+      "name": "Universidade Federal do Ceará",
+      "city": "Fortaleza",
+      "uf": "CE",
+      "lat": -3.7447,
+      "lng": -38.5742,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Mapeamento Sistemático de Comparativos de Ferramentas de Análise Estática de Código com Foco na Segurança",
+          "authors": "Francisco Jean S. Sousa, João Gustavo I. Braga, Anna Beatriz V. Sousa, Valéria Lelli L. Dantas, Rossana M. C. Andrade, Ismayle S. Santos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36762",
+          "year": 2025
+        },
+        {
+          "title": "Uma Abordagem para Testes de Segurança em Aplicações Android",
+          "authors": "Leonardo O. Silva, Emanuel B. Rodrigues, Ismayle de S. Santos",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27294",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "key": "UnB",
+      "name": "Universidade de Brasília",
+      "city": "Brasília",
+      "uf": "DF",
+      "lat": -15.7657,
+      "lng": -47.8721,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Ambiente para Análise e Geração de Inteligência de Ameaças usando Fontes Abertas",
+          "authors": "José Valdy Campelo Júnior, João José Costa Gondim",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4158",
+          "year": 2018
+        },
+        {
+          "title": "Click Fraud Detection and Prevention System For Ad Networks",
+          "authors": "Paulo S. de Almeida, João J. C. Gondim",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4157",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "UPE",
+      "name": "Universidade de Pernambuco",
+      "city": "Recife",
+      "uf": "PE",
+      "lat": -8.045,
+      "lng": -34.95,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Aplicabilidade e Impactos quanto a Adoção de Modelos de Classiﬁcação como Mecanismos Anti-phishing.",
+          "authors": "Mateus de Barros, Carlo da Silva, Péricles de Miranda",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14003",
+          "year": 2019
+        },
+        {
+          "title": "Uma Avaliação das plataformas de denúncia de Phishing: uma análise da plataforma PhishTank",
+          "authors": "Lucas Teixeira, Carlo da Silva",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14002",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UDESC",
+      "name": "Universidade do Estado de Santa Catarina",
+      "city": "Florianópolis",
+      "uf": "SC",
+      "lat": -27.6011,
+      "lng": -48.5185,
+      "paper_count": 2,
+      "papers": [
+        {
+          "title": "Uma proposta para avaliacção de confiança em redes VANETs",
+          "authors": "Eduardo Pandini, Fernando Menezes Matos, Aldri Santos, Adriano Fiorese",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21720",
+          "year": 2022
+        },
+        {
+          "title": "Análise de segurança dos orquestradores Kubernetes, Docker Swarm e Apache Mesos baseada no CVE / MITRE",
+          "authors": "Nikolas Jensen, Charles Christian Miers",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17349",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "CESAR School",
+      "name": "CESAR School",
+      "city": "Recife",
+      "uf": "PE",
+      "lat": -8.0578,
+      "lng": -34.872,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Desafios da Autenticação e Autorização na Comunicação entre Serviços em Arquiteturas de Microsserviços",
+          "authors": "Lis Araújo, Edwin Marinho",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27288",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "key": "CTI",
+      "name": "CTI Renato Archer",
+      "city": "Campinas",
+      "uf": "SP",
+      "lat": -22.81,
+      "lng": -47.063,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Entendimento dos Controles e Possíveis Conflitos de Privacidade nas Redes Sociais Online",
+          "authors": "Talita Costa, Marbilia Sergio, Regina Marin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14006",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UNINTER",
+      "name": "Centro Universitário Internacional UNINTER",
+      "city": "Curitiba",
+      "uf": "PR",
+      "lat": -25.436,
+      "lng": -49.27,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Uma Abordagem para Redução do Tamanho de Shellcodes sem Comprometimento do Comportamento",
+          "authors": "Geyslan Gregório Bem, Guilherme Álvaro Rodrigues Maia Esmeraldo",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17352",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "E-Val",
+      "name": "E-Val Tecnologia",
+      "city": "São Paulo",
+      "uf": "SP",
+      "lat": -23.56,
+      "lng": -46.656,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Análise de Desempenho de uma Ferramenta para Visualização de Hashes em Dispositivos Móveis",
+          "authors": "Henrique Araújo de Carvalho, Jorge Miguel Ribeiro, Daniel Macêdo Batista, José Coelho de Pina",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17357",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "Inmetro",
+      "name": "Inmetro",
+      "city": "Duque de Caxias",
+      "uf": "RJ",
+      "lat": -22.592,
+      "lng": -43.29,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Identificação de Ameaças relacionadas a Medidores de Glicose",
+          "authors": "Fernando Homem da Costa, Lucila Maria de Souza Bento, Noemi Rodriguez",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19282",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "key": "IFC",
+      "name": "Instituto Federal Catarinense",
+      "city": "Blumenau",
+      "uf": "SC",
+      "lat": -26.9194,
+      "lng": -49.0661,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Aplicação e Compliance da LGPD: Uma análise a partir da base de dados APDados no período de 2020 a 2024",
+          "authors": "Amanda L. Ilg, Jean Dalcin, Airton Zancanaro, Carlos Gouvea, Regina Marin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36755",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "key": "IFF",
+      "name": "Instituto Federal Fluminense",
+      "city": "Campos dos Goytacazes",
+      "uf": "RJ",
+      "lat": -21.7622,
+      "lng": -41.3306,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "DevSecOps - integração da segurança contínua em pipelines DevOps: um estudo de caso",
+          "authors": "Rafael Pio de França, Vinicius Barcelos da Silva",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21717",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "key": "IFSP",
+      "name": "Instituto Federal de São Paulo",
+      "city": "São Paulo",
+      "uf": "SP",
+      "lat": -23.523,
+      "lng": -46.634,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Entendimento dos Controles e Possíveis Conflitos de Privacidade nas Redes Sociais Online",
+          "authors": "Talita Costa, Marbilia Sergio, Regina Marin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14006",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "IFCE",
+      "name": "Instituto Federal do Ceará",
+      "city": "Fortaleza",
+      "uf": "CE",
+      "lat": -3.744,
+      "lng": -38.536,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Uma Abordagem para Redução do Tamanho de Shellcodes sem Comprometimento do Comportamento",
+          "authors": "Geyslan Gregório Bem, Guilherme Álvaro Rodrigues Maia Esmeraldo",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17352",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "IFPR",
+      "name": "Instituto Federal do Paraná",
+      "city": "Curitiba",
+      "uf": "PR",
+      "lat": -25.429,
+      "lng": -49.27,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Integração de Detecção de Intrusão em Redes Definidas Por Software",
+          "authors": "Laura Dalpissol, Cleverton J. A. Vicentini, Altair Olivo Santin",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/4164",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "key": "IFRN",
+      "name": "Instituto Federal do Rio Grande do Norte",
+      "city": "Natal",
+      "uf": "RN",
+      "lat": -5.811,
+      "lng": -35.205,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "PhishKiller: Uma Ferramenta para Detecção e Mitigação de Ataques de Phishing Através de Técnicas de Deep Learning",
+          "authors": "Cristian Souza, Marcilio Lemos, Felipe Silva, Robinson Alves",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14009",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "IFTM",
+      "name": "Instituto Federal do Triângulo Mineiro",
+      "city": "Uberaba",
+      "uf": "MG",
+      "lat": -19.7472,
+      "lng": -47.9319,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Segurança da Informação em Foco: Análise Curricular dos Cursos de Computação da Rede Federal no Sudeste do Brasil",
+          "authors": "Bruno Raphael Andrade Varjão Meireles, Lídia Bononi Paiva Tomaz",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36765",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "key": "IME",
+      "name": "Instituto Militar de Engenharia",
+      "city": "Rio de Janeiro",
+      "uf": "RJ",
+      "lat": -22.9556,
+      "lng": -43.166,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "EB-CyberDef: Um Ambiente Integrado de Defesa Cibernética para Apoio à Detecção e ao Combate de Comportamentos Maliciosos no Tráfego de Redes de Computadores",
+          "authors": "Gustavo A. Testoni, Marcos Paulo L. A. Pereira, Sérgio S. Cardoso, Clayton E. das Chagas, Ronaldo R. Goldschimidt",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21709",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "key": "ITA",
+      "name": "Instituto Tecnológico de Aeronáutica",
       "city": "São José dos Campos",
       "uf": "SP",
-      "lat": -23.179,
-      "lng": -45.887,
-      "total": 9,
-      "editions": [
+      "lat": -23.2103,
+      "lng": -45.8664,
+      "paper_count": 1,
+      "papers": [
         {
-          "year": 2024,
-          "n": 9,
-          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/issue/view/1351",
-          "papers": [
-            {
-              "title": "Automação e Cibersegurança: Criando uma Ferramenta de Testes para Redes SDN",
-              "authors": "Ryan M. S. Leal, Johan K. E. Freitas, Francisco A. C. Albuquerque Júnior, Waslon T. A. Lopes, Fabrício B. S. Carvalho, Iguatemi E. Fonseca",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30139"
-            },
-            {
-              "title": "Avaliação da eficiência de jogo educativo para o ensino do comportamento de distinguir e-mails legítimos de tentativas de phishing",
-              "authors": "Jasson Marques Fontoura Júnior, Marcelo Henrique Oliveira Henklain, Felipe Leite Lobo, Eduardo Luzeiro Feitosa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30140"
-            },
-            {
-              "title": "Compact Memory Implementations of the ML-DSA Post-Quantum Digital Signature Algorithm",
-              "authors": "Rodrigo Duarte de Meneses, Caio Teixeira, Marco Aurélio Amaral Henriques",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30141"
-            },
-            {
-              "title": "Comparativo de técnicas de inteligência artificial explicável na detecção de fraudes em transações com cartão de crédito",
-              "authors": "Gabriel Mendes de Lima, Paulo Henrique Pisani",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30142"
-            },
-            {
-              "title": "Construção e Teste de app gamificado gerador de senhas fortes e memoráveis: Um estudo exploratório em cibersegurança",
-              "authors": "Hugo Lima Romão, Marcelo Henrique Oliveira Henklain, Felipe Leite Lobo, Eduardo Luzeiro Feitosa",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30143"
-            },
-            {
-              "title": "Melhorias no Processo de Armazenamento de Dados em TPM para Gerenciamento de Integridade",
-              "authors": "Mariane M. S. Zeitouni, Marcela Tassyany Galdino Santos, Reinaldo Cezar De Morais Gomes",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30144"
-            },
-            {
-              "title": "Proteção de Dados e Conformidade Legal: Uma revisão de Ferramentas, Práticas de Segurança e Direções Futuras",
-              "authors": "Camilla C. B. Quincozes, Ketrin Vargas, Silvio E. Quincozes, César Murilo Silva Jr., Rafael D. Araújo, Vagner E. Quincozes",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30145"
-            },
-            {
-              "title": "Seleção de Características Multiobjetivo para Detecção de Malwares Android",
-              "authors": "Philipe Fransozi, Jhonatan Geremias, Eduardo K. Viegas, Altair O. Santin",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30146"
-            },
-            {
-              "title": "Uma Proposta de Integração da Biblioteca Criptográfica do Sistema Helios ao Sistema Civis",
-              "authors": "Paula Rosene dos Santos, Roberto Samarone Araujo",
-              "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30147"
-            }
-          ]
+          "title": "Enumeração de sistemas operacionais e serviços de firmwares de roteadores sem-fio",
+          "authors": "Gianluigi Dal Toso, Lourenço Alves Pereira Júnior",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17351",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "PUC-Rio",
+      "name": "Pontifícia Universidade Católica do Rio de Janeiro",
+      "city": "Rio de Janeiro",
+      "uf": "RJ",
+      "lat": -22.9791,
+      "lng": -43.233,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Identificação de Ameaças relacionadas a Medidores de Glicose",
+          "authors": "Fernando Homem da Costa, Lucila Maria de Souza Bento, Noemi Rodriguez",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/19282",
+          "year": 2020
+        }
+      ]
+    },
+    {
+      "key": "Senac",
+      "name": "Senac",
+      "city": "São Paulo",
+      "uf": "SP",
+      "lat": -23.528,
+      "lng": -46.67,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Avaliação comparativa do desempenho de inteligências artificiais generativas e ferramentas tradicionais na análise de código-fonte JavaScript",
+          "authors": "Rayane Pimentel, Claudia Bianchi Progetti",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36756",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "key": "UNESP",
+      "name": "Universidade Estadual Paulista",
+      "city": "São Paulo",
+      "uf": "SP",
+      "lat": -23.547,
+      "lng": -46.6386,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Aplicação de Redes Generativas em Detecção de Spam em Cibersegurança",
+          "authors": "Milena de Toledo Araujo, Kelton Augusto Pontara da Costa",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36754",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "key": "UFRPE",
+      "name": "Universidade Federal Rural de Pernambuco",
+      "city": "Recife",
+      "uf": "PE",
+      "lat": -8.0176,
+      "lng": -34.9446,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Aplicabilidade e Impactos quanto a Adoção de Modelos de Classiﬁcação como Mecanismos Anti-phishing.",
+          "authors": "Mateus de Barros, Carlo da Silva, Péricles de Miranda",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14003",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UFCG",
+      "name": "Universidade Federal de Campina Grande",
+      "city": "Campina Grande",
+      "uf": "PB",
+      "lat": -7.2136,
+      "lng": -35.9046,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Melhorias no Processo de Armazenamento de Dados em TPM para Gerenciamento de Integridade",
+          "authors": "Mariane M. S. Zeitouni, Marcela Tassyany Galdino Santos, Reinaldo Cezar De Morais Gomes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/30144",
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "key": "UFG",
+      "name": "Universidade Federal de Goiás",
+      "city": "Goiânia",
+      "uf": "GO",
+      "lat": -16.603,
+      "lng": -49.266,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Uma Arquitetura para Comunicação Espontânea e Segura para Internet das Coisas Móveis em Cidades Inteligentes",
+          "authors": "Gabriel Leopoldino, Ricardo da Rocha",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14015",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UFPE",
+      "name": "Universidade Federal de Pernambuco",
+      "city": "Recife",
+      "uf": "PE",
+      "lat": -8.0522,
+      "lng": -34.9511,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Uma Avaliação das plataformas de denúncia de Phishing: uma análise da plataforma PhishTank",
+          "authors": "Lucas Teixeira, Carlo da Silva",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/14002",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "key": "UFSCar",
+      "name": "Universidade Federal de São Carlos",
+      "city": "São Carlos",
+      "uf": "SP",
+      "lat": -21.984,
+      "lng": -47.881,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Filtragem de Pacotes na Borda da Rede: Uma Análise Comparativa com Foco no Consumo de Energia",
+          "authors": "Arthur Eugenio Silverio, Hélio Crestana Guardia",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27286",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "key": "UFPI",
+      "name": "Universidade Federal do Piauí",
+      "city": "Teresina",
+      "uf": "PI",
+      "lat": -5.056,
+      "lng": -42.796,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Análise de segurança em aplicações Web construídas a partir dos frameworks Django, Express e Flask",
+          "authors": "Rodrigo de Brito, Carlos André Batista de Carvalho",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/21708",
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "key": "UFRJ",
+      "name": "Universidade Federal do Rio de Janeiro",
+      "city": "Rio de Janeiro",
+      "uf": "RJ",
+      "lat": -22.8626,
+      "lng": -43.2236,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Aplicação de Criptografia Homomórfica na Mineração de Dados em Fluxos de Roteadores de Borda na Internet",
+          "authors": "Felipe M. F. de Assis, Evandro L. C. Macedo, Luís F. M. de Moraes",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/27301",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "key": "FURB",
+      "name": "Universidade Regional de Blumenau",
+      "city": "Blumenau",
+      "uf": "SC",
+      "lat": -26.906,
+      "lng": -49.071,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "WebGoat Plus: Uma Extensão da Ferramenta WebGoat",
+          "authors": "Artur Ricardo Bizon, Gilvan Justino",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/17348",
+          "year": 2021
+        }
+      ]
+    },
+    {
+      "key": "UTFPR",
+      "name": "Universidade Tecnológica Federal do Paraná",
+      "city": "Curitiba",
+      "uf": "PR",
+      "lat": -25.439,
+      "lng": -49.27,
+      "paper_count": 1,
+      "papers": [
+        {
+          "title": "Avaliação de desempenho e segurança de diferentes implementações do sistema de criptografia RSA",
+          "authors": "Ana Carla Quallio Rosa, Rodrigo Campiolo, Daniel Macêdo Batista",
+          "url": "https://sol.sbc.org.br/index.php/sbseg_estendido/article/view/36757",
+          "year": 2025
         }
       ]
     }

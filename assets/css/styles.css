@@ -494,19 +494,19 @@ body[data-page="publicacoes"] .cards .card:hover::after{opacity:1;transform:tran
 .wticg-cols{display:grid;grid-template-columns:1.4fr 1fr;gap:26px}
 .wticg-col h3{font-size:.9rem;color:var(--navy);margin:0 0 .7rem;text-transform:uppercase;letter-spacing:.03em}
 .wticg-bars{list-style:none;margin:0;padding:0}
-.wticg-bar{display:grid;grid-template-columns:44px 1fr 28px auto;align-items:center;gap:10px;margin:.3rem 0;font-size:.85rem}
-.wticg-bar-yr a{font-weight:600;color:var(--link)}
+.wticg-bar{display:grid;grid-template-columns:96px 1fr 28px;align-items:center;gap:10px;margin:.32rem 0;font-size:.85rem}
+.wticg-bar-name{font-weight:600;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wticg-bar-track{height:12px;background:var(--bg-alt);border-radius:999px;overflow:hidden}
 .wticg-bar-fill{display:block;height:100%;border-radius:999px}
 .wticg-bar-n{font-weight:700;color:var(--ink);text-align:right}
-.wticg-bar-city{font-size:.78rem;color:var(--faint);white-space:nowrap}
 .wticg-authors{list-style:none;margin:0;padding:0;font-size:.85rem;line-height:1.5}
 .wticg-authors li{display:flex;justify-content:space-between;gap:10px;padding:.15rem 0;
   border-bottom:1px solid var(--border)}
 .wticg-authors li:last-child{border-bottom:0}
 .wticg-au-n{font-weight:700;color:#ea580c}
+.cm-pub-yr{display:inline-block;min-width:2.4em;font-weight:700;color:var(--faint);font-size:.78rem}
 @media (max-width:640px){.wticg-cols{grid-template-columns:1fr}
-  .wticg-bar-city{display:none}.wticg-bar{grid-template-columns:40px 1fr 26px}}
+  .wticg-bar{grid-template-columns:84px 1fr 26px}}
 
 /* Contact / contribute form */
 .map-contribute .map-form{max-width:720px;margin-top:18px}

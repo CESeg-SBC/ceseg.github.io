@@ -493,58 +493,52 @@
       .catch(function () { cb(true); });
   }
 
-  /* WTICG overlay: one pin per SBSeg host city, sized by how many WTICG papers
-     (Workshop de Trabalhos de Iniciação Científica e de Graduação) were presented
-     there across editions. Built from assets/data/wticg-stats.json. */
-  function wticgPopup(c) {
-    var head = esc(c.city) + (c.uf ? ' · ' + esc(c.uf) : '');
-    var rows = c.editions.map(function (e) {
-      var papers = (e.papers || []).slice(0, 6).map(function (p) {
-        return '<li>' + (p.url
-          ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
-          : esc(p.title)) + '</li>';
-      }).join('');
-      var more = (e.papers && e.papers.length > 6)
-        ? '<li class="cm-more"><a href="' + esc(e.url) + '" target="_blank" rel="noopener">+' +
-          (e.papers.length - 6) + ' · ' + esc(tr('map.wticgAll', 'all papers')) + '</a></li>' : '';
-      return '<div class="sbseg-ed"><b>WTICG ' + esc(String(e.year)) + '</b> · ' +
-        esc(e.n + ' ' + tr('map.wticgPapers', 'papers')) +
-        '<ul class="cm-pub-list">' + papers + more + '</ul></div>';
+  /* WTICG overlay: one pin per author institution, sized by how many WTICG papers
+     (Workshop de Trabalhos de Iniciação Científica e de Graduação) had at least one
+     co-author from that institution. A paper with authors from several institutions
+     appears at each. Built from assets/data/wticg-stats.json. */
+  function wticgPopup(inst) {
+    var head = esc(inst.name) + (inst.city ? ' · ' + esc(inst.city) + (inst.uf ? '/' + esc(inst.uf) : '') : '');
+    var papers = (inst.papers || []).slice(0, 14).map(function (p) {
+      var t = p.url
+        ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
+        : esc(p.title);
+      return '<li><span class="cm-pub-yr">' + esc(String(p.year)) + '</span> ' + t + '</li>';
     }).join('');
+    var more = (inst.papers && inst.papers.length > 14)
+      ? '<li class="cm-more">+' + (inst.papers.length - 14) + '</li>' : '';
     return '<div class="cm-detail"><span class="cm-tag" style="background:' + WTICG_COLOR + '">' +
-      esc(c.total + ' ' + tr('map.wticgPapers', 'papers') + ' · WTICG') + '</span><h4>' + head +
-      '</h4>' + rows + '</div>';
+      esc(inst.paper_count + ' ' + tr('map.wticgPapers', 'papers') + ' · WTICG') + '</span><h4>' +
+      head + '</h4><ul class="cm-pub-list">' + papers + more + '</ul></div>';
   }
 
   function buildWticgLayer() {
     if (!WTICG) return;
     wticgLayer = L.layerGroup();
-    (WTICG.cities || []).forEach(function (c) {
-      if (c.lat == null || c.lng == null) return;
-      L.circleMarker([c.lat, c.lng], {
-        radius: statRadius(c.total), color: '#fff', weight: 1,
+    (WTICG.institutions || []).forEach(function (inst) {
+      if (inst.lat == null || inst.lng == null) return;
+      L.circleMarker([inst.lat, inst.lng], {
+        radius: statRadius(inst.paper_count), color: '#fff', weight: 1,
         fillColor: WTICG_COLOR, fillOpacity: 0.85
-      }).bindPopup(wticgPopup(c), { maxWidth: 340 }).addTo(wticgLayer);
+      }).bindPopup(wticgPopup(inst), { maxWidth: 340 }).addTo(wticgLayer);
     });
   }
 
-  /* WTICG statistics panel below the map: totals plus a per-edition bar list and
-     the most frequent authors. Rendered from the same wticg-stats.json. */
+  /* WTICG statistics panel below the map: totals plus the institutions with the
+     most papers and the most frequent authors. Rendered from wticg-stats.json. */
   function renderWticg() {
     var box = document.getElementById('wticgStats');
     if (!box) return;
     if (!WTICG) { var s = box.closest('section'); if (s) s.hidden = true; return; }
-    var max = WTICG.per_year.reduce(function (m, e) { return Math.max(m, e.n); }, 1);
-    var bars = WTICG.per_year.map(function (e) {
-      var pct = Math.round((e.n / max) * 100);
-      var loc = e.city ? esc(e.city) + (e.uf ? '/' + esc(e.uf) : '') : '';
-      var yr = e.url
-        ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + e.year + '</a>' : e.year;
-      return '<li class="wticg-bar"><span class="wticg-bar-yr">' + yr + '</span>' +
+    var top = (WTICG.top_institutions || []);
+    var max = top.reduce(function (m, i) { return Math.max(m, i.n); }, 1);
+    var bars = top.map(function (i) {
+      var pct = Math.round((i.n / max) * 100);
+      return '<li class="wticg-bar"><span class="wticg-bar-name" title="' + esc(i.name) + '">' +
+        esc(i.key || i.name) + '</span>' +
         '<span class="wticg-bar-track"><span class="wticg-bar-fill" style="width:' + pct +
         '%;background:' + WTICG_COLOR + '"></span></span>' +
-        '<span class="wticg-bar-n">' + e.n + '</span>' +
-        '<span class="wticg-bar-city">' + loc + '</span></li>';
+        '<span class="wticg-bar-n">' + i.n + '</span></li>';
     }).join('');
     var authors = (WTICG.top_authors || []).slice(0, 12).map(function (a) {
       return '<li>' + esc(a.name) + ' <span class="wticg-au-n">' + a.n + '</span></li>';
@@ -553,10 +547,11 @@
       '<div class="wticg-nums">' +
         '<div class="wticg-num"><b>' + WTICG.total_papers + '</b><span>' + esc(tr('map.wticgStatPapers', 'papers')) + '</span></div>' +
         '<div class="wticg-num"><b>' + WTICG.n_editions + '</b><span>' + esc(tr('map.wticgStatEditions', 'editions')) + '</span></div>' +
+        '<div class="wticg-num"><b>' + WTICG.distinct_institutions + '</b><span>' + esc(tr('map.wticgStatInstitutions', 'institutions')) + '</span></div>' +
         '<div class="wticg-num"><b>' + WTICG.distinct_authors + '</b><span>' + esc(tr('map.wticgStatAuthors', 'authors')) + '</span></div>' +
       '</div>' +
       '<div class="wticg-cols">' +
-        '<div class="wticg-col"><h3>' + esc(tr('map.wticgPerYear', 'Papers per edition')) + '</h3>' +
+        '<div class="wticg-col"><h3>' + esc(tr('map.wticgTopInstitutions', 'Institutions with the most papers')) + '</h3>' +
           '<ul class="wticg-bars">' + bars + '</ul></div>' +
         '<div class="wticg-col"><h3>' + esc(tr('map.wticgTopAuthors', 'Most frequent authors')) + '</h3>' +
           '<ul class="wticg-authors">' + authors + '</ul></div>' +

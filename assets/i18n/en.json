@@ -350,6 +350,8 @@
     "wticgStatPapers": "papers",
     "wticgStatEditions": "editions",
     "wticgStatAuthors": "authors",
+    "wticgStatInstitutions": "institutions",
+    "wticgTopInstitutions": "Institutions with the most papers",
     "wticgPerYear": "Papers per edition",
     "wticgTopAuthors": "Most frequent authors",
     "loadError": "Could not load the map data.",
@@ -393,7 +395,7 @@
   "wticg": {
     "eyebrow": "SBSeg Extended · Undergraduate Research",
     "h2": "WTICG · Undergraduate and Early-Career Research Workshop",
-    "intro": "Statistics of the papers published at the Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), a sub-event of the SBSeg Extended Proceedings. On the map above, enable the WTICG layer to see, by host city, how many papers were presented in each edition.",
+    "intro": "Statistics of the papers published at the Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), a sub-event of the SBSeg Extended Proceedings. Each paper is attributed to its authors' institutions (extracted from SOL/SBC); papers with co-authors from several institutions appear at all of them. On the map above, enable the WTICG layer to see the papers by institution.",
     "cta": "See the Extended Proceedings papers →"
   },
   "mapForm": {
