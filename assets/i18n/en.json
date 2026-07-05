@@ -344,6 +344,14 @@
     "sbsegClone": "clone",
     "sbsegAnais": "proceedings",
     "sbsegOnline": "online",
+    "wticgToggle": "WTICG",
+    "wticgPapers": "papers",
+    "wticgAll": "all papers",
+    "wticgStatPapers": "papers",
+    "wticgStatEditions": "editions",
+    "wticgStatAuthors": "authors",
+    "wticgPerYear": "Papers per edition",
+    "wticgTopAuthors": "Most frequent authors",
     "loadError": "Could not load the map data.",
     "allStates": "All states",
     "allTopics": "All topics",
@@ -382,9 +390,15 @@
     "intro": "Listing of research groups from the Brazilian Directory of Research Groups (DGP/CNPq) linked to the researchers on the map, with their research lines. On the dedicated page you can explore the research-lines word cloud and search by topic, institution or coordinator.",
     "cta": "Explore the CNPq research groups →"
   },
+  "wticg": {
+    "eyebrow": "SBSeg Extended · Undergraduate Research",
+    "h2": "WTICG · Undergraduate and Early-Career Research Workshop",
+    "intro": "Statistics of the papers published at the Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), a sub-event of the SBSeg Extended Proceedings. On the map above, enable the WTICG layer to see, by host city, how many papers were presented in each edition.",
+    "cta": "See the Extended Proceedings papers →"
+  },
   "mapForm": {
     "eyebrow": "Get involved",
-    "h2": "Add your information to the map",
+    "h2": "Add or update your information on the map",
     "intro": "Are you a researcher, or do you lead a cybersecurity group or program? Send your details so we can add you to the map. The form opens your email app with a ready-to-send message.",
     "name": "Full name",
     "namePh": "Your name",

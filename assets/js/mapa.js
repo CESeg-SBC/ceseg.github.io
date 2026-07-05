@@ -20,9 +20,11 @@
   // Ordered two-row filter strip: type chips filter the cluster; overlay chips
   // toggle their own Leaflet layer. Rendered four-per-row by CSS.
   var TOOL_COLOR = '#c026d3';
+  var WTICG_COLOR = '#ea580c';
   var CHIP_ORDER = [
     { kind: 'overlay', layer: 'pubs',  labelKey: 'map.typePublication',  def: 'Publications',     color: TYPES.publication.color },
     { kind: 'overlay', layer: 'sbseg', labelKey: 'map.sbsegToggle',      def: 'SBSeg editions',   color: '#1e3a5f' },
+    { kind: 'overlay', layer: 'wticg', labelKey: 'map.wticgToggle',      def: 'WTICG',            color: WTICG_COLOR },
     { kind: 'type',    type: 'researcher',    labelKey: 'map.typeResearcher',   def: 'Researchers',      color: TYPES.researcher.color },
     { kind: 'type',    type: 'group',         labelKey: 'map.typeGroup',        def: 'Research Groups',  color: TYPES.group.color },
     { kind: 'type',    type: 'cnpq_group',    labelKey: 'map.typeCnpqGroup',    def: 'CNPq Groups',      color: TYPES.cnpq_group.color },
@@ -66,11 +68,12 @@
 
   var DATA = null, RECORDS = [], MARKERS = {}, map, cluster;
   var STATS = null, pubsLayer = null, toolsLayer = null;
+  var WTICG = null, wticgLayer = null;
   // Cluster entity types, all active by default. Publications and tools are not
   // cluster types: they are aggregated per-institution overlays (see overlayOn).
   var activeTypes = { researcher: true, group: true, cnpq_group: true, program: true };
   // Overlay layers: all on by default.
-  var overlayOn = { pubs: true, sbseg: true, tools: true };
+  var overlayOn = { pubs: true, sbseg: true, tools: true, wticg: false };
   var selState = '', selTopic = '', selLine = '', query = '';
   var els = {};
 
@@ -249,6 +252,7 @@
     if (name === 'pubs') return STATS.institutions.filter(function (i) { return i.pub_count > 0; }).length;
     if (name === 'tools') return STATS.institutions.filter(function (i) { return i.tool_count > 0; }).length;
     if (name === 'sbseg') return 25;
+    if (name === 'wticg') return WTICG ? WTICG.total_papers : 0;
     return 0;
   }
 
@@ -343,6 +347,7 @@
     els.state.value = sv; els.topic.value = tv;
     if (els.line) els.line.value = lv;
     renderCnpqList();
+    renderWticg();
     render();
   }
 
@@ -488,6 +493,76 @@
       .catch(function () { cb(true); });
   }
 
+  /* WTICG overlay: one pin per SBSeg host city, sized by how many WTICG papers
+     (Workshop de Trabalhos de Iniciação Científica e de Graduação) were presented
+     there across editions. Built from assets/data/wticg-stats.json. */
+  function wticgPopup(c) {
+    var head = esc(c.city) + (c.uf ? ' · ' + esc(c.uf) : '');
+    var rows = c.editions.map(function (e) {
+      var papers = (e.papers || []).slice(0, 6).map(function (p) {
+        return '<li>' + (p.url
+          ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
+          : esc(p.title)) + '</li>';
+      }).join('');
+      var more = (e.papers && e.papers.length > 6)
+        ? '<li class="cm-more"><a href="' + esc(e.url) + '" target="_blank" rel="noopener">+' +
+          (e.papers.length - 6) + ' · ' + esc(tr('map.wticgAll', 'all papers')) + '</a></li>' : '';
+      return '<div class="sbseg-ed"><b>WTICG ' + esc(String(e.year)) + '</b> · ' +
+        esc(e.n + ' ' + tr('map.wticgPapers', 'papers')) +
+        '<ul class="cm-pub-list">' + papers + more + '</ul></div>';
+    }).join('');
+    return '<div class="cm-detail"><span class="cm-tag" style="background:' + WTICG_COLOR + '">' +
+      esc(c.total + ' ' + tr('map.wticgPapers', 'papers') + ' · WTICG') + '</span><h4>' + head +
+      '</h4>' + rows + '</div>';
+  }
+
+  function buildWticgLayer() {
+    if (!WTICG) return;
+    wticgLayer = L.layerGroup();
+    (WTICG.cities || []).forEach(function (c) {
+      if (c.lat == null || c.lng == null) return;
+      L.circleMarker([c.lat, c.lng], {
+        radius: statRadius(c.total), color: '#fff', weight: 1,
+        fillColor: WTICG_COLOR, fillOpacity: 0.85
+      }).bindPopup(wticgPopup(c), { maxWidth: 340 }).addTo(wticgLayer);
+    });
+  }
+
+  /* WTICG statistics panel below the map: totals plus a per-edition bar list and
+     the most frequent authors. Rendered from the same wticg-stats.json. */
+  function renderWticg() {
+    var box = document.getElementById('wticgStats');
+    if (!box) return;
+    if (!WTICG) { var s = box.closest('section'); if (s) s.hidden = true; return; }
+    var max = WTICG.per_year.reduce(function (m, e) { return Math.max(m, e.n); }, 1);
+    var bars = WTICG.per_year.map(function (e) {
+      var pct = Math.round((e.n / max) * 100);
+      var loc = e.city ? esc(e.city) + (e.uf ? '/' + esc(e.uf) : '') : '';
+      var yr = e.url
+        ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + e.year + '</a>' : e.year;
+      return '<li class="wticg-bar"><span class="wticg-bar-yr">' + yr + '</span>' +
+        '<span class="wticg-bar-track"><span class="wticg-bar-fill" style="width:' + pct +
+        '%;background:' + WTICG_COLOR + '"></span></span>' +
+        '<span class="wticg-bar-n">' + e.n + '</span>' +
+        '<span class="wticg-bar-city">' + loc + '</span></li>';
+    }).join('');
+    var authors = (WTICG.top_authors || []).slice(0, 12).map(function (a) {
+      return '<li>' + esc(a.name) + ' <span class="wticg-au-n">' + a.n + '</span></li>';
+    }).join('');
+    box.innerHTML =
+      '<div class="wticg-nums">' +
+        '<div class="wticg-num"><b>' + WTICG.total_papers + '</b><span>' + esc(tr('map.wticgStatPapers', 'papers')) + '</span></div>' +
+        '<div class="wticg-num"><b>' + WTICG.n_editions + '</b><span>' + esc(tr('map.wticgStatEditions', 'editions')) + '</span></div>' +
+        '<div class="wticg-num"><b>' + WTICG.distinct_authors + '</b><span>' + esc(tr('map.wticgStatAuthors', 'authors')) + '</span></div>' +
+      '</div>' +
+      '<div class="wticg-cols">' +
+        '<div class="wticg-col"><h3>' + esc(tr('map.wticgPerYear', 'Papers per edition')) + '</h3>' +
+          '<ul class="wticg-bars">' + bars + '</ul></div>' +
+        '<div class="wticg-col"><h3>' + esc(tr('map.wticgTopAuthors', 'Most frequent authors')) + '</h3>' +
+          '<ul class="wticg-authors">' + authors + '</ul></div>' +
+      '</div>';
+  }
+
   function setOverlay(name, on) {
     overlayOn[name] = on;
     if (name === 'pubs') {
@@ -502,6 +577,9 @@
       } else if (sbsegLayer) {
         map.removeLayer(sbsegLayer);
       }
+    } else if (name === 'wticg') {
+      if (on) { if (wticgLayer) map.addLayer(wticgLayer); }
+      else if (wticgLayer) map.removeLayer(wticgLayer);
     }
   }
 
@@ -522,18 +600,22 @@
     buildMap();
     Promise.all([
       fetch('assets/data/cybersecmap.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }),
-      fetch('assets/data/proceedings-stats.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).catch(function () { return { institutions: [] }; })
+      fetch('assets/data/proceedings-stats.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).catch(function () { return { institutions: [] }; }),
+      fetch('assets/data/wticg-stats.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).catch(function () { return null; })
     ]).then(function (res) {
         DATA = res[0]; RECORDS = DATA.records || [];
         STATS = res[1] || { institutions: [] };
+        WTICG = res[2] || null;
         buildMarkers();
         buildStatLayers();
+        buildWticgLayer();
         buildChips();
         buildSelects();
         wire();
         renderCnpqList();
+        renderWticg();
         render();
-        ['pubs', 'sbseg', 'tools'].forEach(function (k) { if (overlayOn[k]) setOverlay(k, true); }); // default-on overlays
+        ['pubs', 'sbseg', 'tools', 'wticg'].forEach(function (k) { if (overlayOn[k]) setOverlay(k, true); }); // default-on overlays
         if (window.matchMedia('(max-width: 760px)').matches) setView('map');
       })
       .catch(function () {

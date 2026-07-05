@@ -344,6 +344,14 @@
     "sbsegClone": "clon",
     "sbsegAnais": "anales",
     "sbsegOnline": "en línea",
+    "wticgToggle": "WTICG",
+    "wticgPapers": "trabajos",
+    "wticgAll": "todos los artículos",
+    "wticgStatPapers": "trabajos",
+    "wticgStatEditions": "ediciones",
+    "wticgStatAuthors": "autores",
+    "wticgPerYear": "Trabajos por edición",
+    "wticgTopAuthors": "Autores más frecuentes",
     "loadError": "No se pudieron cargar los datos del mapa.",
     "allStates": "Todos los estados",
     "allTopics": "Todos los temas",
@@ -382,9 +390,15 @@
     "intro": "Relación de los grupos de investigación del Directorio de Grupos de Investigación de Brasil (DGP/CNPq) vinculados a los investigadores del mapa, con sus respectivas líneas de investigación. En la página dedicada encontrará la nube de líneas de investigación y la búsqueda por tema, institución o coordinador.",
     "cta": "Explorar los grupos de investigación CNPq →"
   },
+  "wticg": {
+    "eyebrow": "SBSeg Extendido · Iniciación Científica",
+    "h2": "WTICG · Trabajos de Iniciación Científica y de Grado",
+    "intro": "Estadísticas de las publicaciones en el Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), subevento de los Anales Extendidos del SBSeg. En el mapa de arriba, active la capa WTICG para ver, por ciudad sede, cuántos trabajos se presentaron en cada edición.",
+    "cta": "Ver los artículos de los Anales Extendidos →"
+  },
   "mapForm": {
     "eyebrow": "Participe",
-    "h2": "Incluya su información en el mapa",
+    "h2": "Incluya o actualice su información en el mapa",
     "intro": "¿Es investigador(a) o lidera un grupo o programa en ciberseguridad? Envíe sus datos para incluirlos en el mapa. El formulario abre su aplicación de correo con el mensaje listo para enviar.",
     "name": "Nombre completo",
     "namePh": "Su nombre",
