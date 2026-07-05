@@ -154,6 +154,9 @@
     });
     els.cloud.addEventListener('click', function (e) {
       var b = e.target.closest('.wc-word'); if (!b) return;
+      // site.js has a document-level .wc-word handler that navigates to the SBSeg
+      // proceedings; stop the click here so this page filters in place instead.
+      e.stopPropagation();
       toggleWord(b.dataset.term);
     });
   }
