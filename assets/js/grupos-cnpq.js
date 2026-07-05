@@ -26,42 +26,96 @@
     });
   }
 
-  // Accent-insensitive stopwords (Portuguese + English) dropped from the cloud.
-  var STOP = {};
+  // Words dropped when they land at the start/end of a phrase (connectors and
+  // prepositions are kept INSIDE phrases, e.g. "rede sem fio", "redes de sensores").
+  var STOP_EDGE = {};
   ('de da do das dos e em a o as os para por com na no nas nos um uma que ao aos se ' +
-   'sua seu suas seus ou entre sobre como sem sob ate até mais menos ' +
-   'of the and in for to on with a an by from at as ' +
-   'pesquisa grupo grupos linha linhas area areas estudo estudos tema temas').split(' ')
-    .forEach(function (w) { STOP[fold(w)] = true; });
+   'ou entre sobre como sem sob ate at\u00e9 mais menos of the and in for to on with by from at as')
+    .split(' ').forEach(function (w) { STOP_EDGE[fold(w)] = true; });
+  // Fragments that are meaningless on their own (mostly orphaned adjectives left
+  // over when a comma-separated list is split); never shown as cloud terms.
+  var WEAK = {};
+  ('fio moveis movel gerais legais organizacionais regulatorios aplicada aplicado aplicados ' +
+   'aplicadas outros outras demais novos novas geral humanos distribuida distribuido segura seguros')
+    .split(' ').forEach(function (w) { WEAK[fold(w)] = true; });
 
   var GROUPS = [];
+  var LABELS = {};      // folded phrase key -> best display label
+  var LABEL_CT = {};    // folded key -> { variantLabel: count } for picking best display
   var query = '';       // folded search string
   var activeWord = '';  // currently selected cloud term (folded), '' if none
   var els = {};
 
-  /* Tokenise a research line into meaningful terms (>=3 chars, not stopwords,
-     not purely numeric). Returns folded tokens. */
-  function terms(line) {
-    return fold(line).split(/[^a-z0-9à-ÿ]+/)
-      .filter(function (w) { return w.length >= 3 && !STOP[w] && !/^\d+$/.test(w); });
+  // Capitalise the first letter only when the label is entirely lowercase.
+  function cap(s) {
+    return /[A-Z\u00c0-\u00de]/.test(s) ? s : s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  // Among label variants that fold to the same phrase, prefer the richest one:
+  // most accented letters (impeccable Portuguese), then most capitalised words,
+  // then the most frequent variant.
+  // Turn a stray ALL-CAPS word (>=5 letters) into Title case, leaving short
+  // acronyms (IoT, RAN, O-RAN, 5G) untouched.
+  function normalizeCaps(label) {
+    return label.split(' ').map(function (w) {
+      return /^[A-Z\u00c0-\u00de]{5,}$/.test(w)
+        ? w.charAt(0) + w.slice(1).toLowerCase() : w;
+    }).join(' ');
+  }
+
+  function bestLabel(counts) {
+    var best = null, bestScore = -1;
+    Object.keys(counts).forEach(function (lab) {
+      var acc = (lab.match(/[\u00c0-\u024f]/g) || []).length;      // accented letters
+      var titled = (lab.match(/(^|\s)[A-Z\u00c0-\u00de][a-z\u00df-\u00ff]/g) || []).length; // Title Case words
+      var score = acc * 1e6 + titled * 1e3 + counts[lab];
+      if (score > bestScore) { bestScore = score; best = lab; }
+    });
+    return normalizeCaps(best);
+  }
+
+  /* Break a research line into meaningful concept phrases. Splits only on strong
+     separators (comma, semicolon, slash, " e ", " ou ") so multi-word terms stay
+     intact; drops parentheticals and edge stopwords. Returns [{key, label}]. */
+  function phrases(line) {
+    var out = [];
+    line.split(/,|;|\/| e | ou /).forEach(function (seg) {
+      seg = seg.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ')
+        .replace(/^[\s\-\u2013\u2014:.]+|[\s\-\u2013\u2014:.]+$/g, '');
+      var w = seg.split(' ');
+      while (w.length && STOP_EDGE[fold(w[0])]) w.shift();
+      while (w.length && STOP_EDGE[fold(w[w.length - 1])]) w.pop();
+      var label = w.join(' ');
+      var key = fold(label);
+      if (key.length < 4 || WEAK[key]) return;
+      if (w.length === 1 && key.length < 5) return; // drop short lone words
+      out.push({ key: key, label: cap(label) });
+    });
+    return out;
   }
 
   function precompute() {
+    LABELS = {}; LABEL_CT = {};
     GROUPS.forEach(function (g) {
       var parts = [g.name, g.institution, g.state,
         (g.members || []).join(' '), (g.lines || []).join(' ')];
       g._hay = fold(parts.join(' '));
-      // Distinct folded terms for this group (document-frequency counting).
+      // Distinct phrase keys for this group (document-frequency counting).
       var seen = {};
       (g.lines || []).forEach(function (l) {
-        terms(l).forEach(function (w) { seen[w] = true; });
+        phrases(l).forEach(function (pp) {
+          seen[pp.key] = true;
+          var ct = LABEL_CT[pp.key] || (LABEL_CT[pp.key] = {});
+          ct[pp.label] = (ct[pp.label] || 0) + 1;
+        });
       });
       g._terms = seen;
     });
+    Object.keys(LABEL_CT).forEach(function (k) { LABELS[k] = bestLabel(LABEL_CT[k]); });
   }
 
-  /* Build the word cloud: count in how many groups each term appears, take the
-     most common, and map their frequency to five size buckets. */
+  /* Build the cloud: count in how many groups each phrase appears, take the most
+     common, and map their frequency to five size buckets. */
   function buildCloud() {
     if (!els.cloud) return;
     var freq = {};
@@ -71,23 +125,13 @@
     var words = Object.keys(freq)
       .filter(function (w) { return freq[w] >= 2; })
       .sort(function (a, b) { return freq[b] - freq[a] || a.localeCompare(b); })
-      .slice(0, 80);
+      .slice(0, 70);
     if (!words.length) { els.cloud.innerHTML = ''; return; }
     var max = freq[words[0]], min = freq[words[words.length - 1]];
     var span = Math.max(1, max - min);
-    // A representative (accent-preserving) label for each folded term.
-    var labelOf = {};
-    GROUPS.forEach(function (g) {
-      (g.lines || []).forEach(function (l) {
-        l.split(/[^A-Za-z0-9À-ſ]+/).forEach(function (raw) {
-          var f = fold(raw);
-          if (freq[f] && !labelOf[f]) labelOf[f] = raw;
-        });
-      });
-    });
     els.cloud.innerHTML = words.map(function (w) {
       var bucket = 1 + Math.round(((freq[w] - min) / span) * 4); // 1..5
-      var label = labelOf[w] || w;
+      var label = LABELS[w] || w;
       return '<button type="button" class="wc-word wc-s' + bucket +
         (w === activeWord ? ' active' : '') +
         '" data-term="' + esc(w) + '" title="' + freq[w] + '">' + esc(label) + '</button>';
