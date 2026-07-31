@@ -344,16 +344,6 @@
     "sbsegClone": "clone",
     "sbsegAnais": "proceedings",
     "sbsegOnline": "online",
-    "wticgToggle": "WTICG",
-    "wticgPapers": "papers",
-    "wticgAll": "all papers",
-    "wticgStatPapers": "papers",
-    "wticgStatEditions": "editions",
-    "wticgStatAuthors": "authors",
-    "wticgStatInstitutions": "institutions",
-    "wticgTopInstitutions": "Institutions with the most papers",
-    "wticgPerYear": "Papers per edition",
-    "wticgTopAuthors": "Most frequent authors",
     "loadError": "Could not load the map data.",
     "allStates": "All states",
     "allTopics": "All topics",
@@ -383,20 +373,23 @@
     "groupSite": "website",
     "groupLeaderRole": "leader",
     "typeCnpqGroup": "CNPq Groups",
+    "typeInct": "INCTs",
+    "inctStatus": "Status",
+    "inctActive": "in progress",
+    "inctPast": "concluded (historical record)",
     "allLines": "All research lines",
     "members": "Researchers"
+  },
+  "inct": {
+    "eyebrow": "National Institutes of Science and Technology · CNPq",
+    "h2": "INCTs in cybersecurity",
+    "intro": "National Institutes of Science and Technology (INCTs) funded by the CNPq that work on cybersecurity. The listing includes both the institutes in progress and those already concluded, kept for their historical value to the community."
   },
   "cnpq": {
     "eyebrow": "Directory of Research Groups · CNPq",
     "h2": "CNPq research groups and research lines",
     "intro": "Listing of research groups from the Brazilian Directory of Research Groups (DGP/CNPq) linked to the researchers on the map, with their research lines. On the dedicated page you can explore the research-lines word cloud and search by topic, institution or coordinator.",
     "cta": "Explore the CNPq research groups →"
-  },
-  "wticg": {
-    "eyebrow": "SBSeg Extended · Undergraduate Research",
-    "h2": "WTICG · Undergraduate and Early-Career Research Workshop",
-    "intro": "Statistics of the papers published at the Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), a sub-event of the SBSeg Extended Proceedings. Each paper is attributed to its authors' institutions (extracted from SOL/SBC); papers with co-authors from several institutions appear at all of them. On the map above, enable the WTICG layer to see the papers by institution.",
-    "cta": "See the Extended Proceedings papers →"
   },
   "mapForm": {
     "eyebrow": "Get involved",

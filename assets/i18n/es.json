@@ -344,16 +344,6 @@
     "sbsegClone": "clon",
     "sbsegAnais": "anales",
     "sbsegOnline": "en línea",
-    "wticgToggle": "WTICG",
-    "wticgPapers": "trabajos",
-    "wticgAll": "todos los artículos",
-    "wticgStatPapers": "trabajos",
-    "wticgStatEditions": "ediciones",
-    "wticgStatAuthors": "autores",
-    "wticgStatInstitutions": "instituciones",
-    "wticgTopInstitutions": "Instituciones con más trabajos",
-    "wticgPerYear": "Trabajos por edición",
-    "wticgTopAuthors": "Autores más frecuentes",
     "loadError": "No se pudieron cargar los datos del mapa.",
     "allStates": "Todos los estados",
     "allTopics": "Todos los temas",
@@ -383,20 +373,23 @@
     "groupSite": "sitio",
     "groupLeaderRole": "líder",
     "typeCnpqGroup": "Grupos CNPq",
+    "typeInct": "INCTs",
+    "inctStatus": "Situación",
+    "inctActive": "en curso",
+    "inctPast": "finalizado (registro histórico)",
     "allLines": "Todas las líneas de investigación",
     "members": "Investigadores"
+  },
+  "inct": {
+    "eyebrow": "Institutos Nacionales de Ciencia y Tecnología · CNPq",
+    "h2": "INCTs en ciberseguridad",
+    "intro": "Institutos Nacionales de Ciencia y Tecnología (INCTs) apoyados por el CNPq con actuación en ciberseguridad. La relación incluye los institutos en curso y los ya finalizados, conservados por su valor histórico para la comunidad."
   },
   "cnpq": {
     "eyebrow": "Directorio de Grupos de Investigación · CNPq",
     "h2": "Grupos de investigación CNPq y líneas de investigación",
     "intro": "Relación de los grupos de investigación del Directorio de Grupos de Investigación de Brasil (DGP/CNPq) vinculados a los investigadores del mapa, con sus respectivas líneas de investigación. En la página dedicada encontrará la nube de líneas de investigación y la búsqueda por tema, institución o coordinador.",
     "cta": "Explorar los grupos de investigación CNPq →"
-  },
-  "wticg": {
-    "eyebrow": "SBSeg Extendido · Iniciación Científica",
-    "h2": "WTICG · Trabajos de Iniciación Científica y de Grado",
-    "intro": "Estadísticas de las publicaciones en el Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), subevento de los Anales Extendidos del SBSeg. Cada trabajo se asocia a las instituciones de sus autores (extraídas del SOL/SBC); los trabajos con coautores de varias instituciones aparecen en todas ellas. En el mapa de arriba, active la capa WTICG para ver los trabajos por institución.",
-    "cta": "Ver los artículos de los Anales Extendidos →"
   },
   "mapForm": {
     "eyebrow": "Participe",

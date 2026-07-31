@@ -367,16 +367,6 @@
     "sbsegClone": "clone",
     "sbsegAnais": "anais",
     "sbsegOnline": "online",
-    "wticgToggle": "WTICG",
-    "wticgPapers": "trabalhos",
-    "wticgAll": "todos os artigos",
-    "wticgStatPapers": "trabalhos",
-    "wticgStatEditions": "edições",
-    "wticgStatAuthors": "autores",
-    "wticgStatInstitutions": "instituições",
-    "wticgTopInstitutions": "Instituições com mais trabalhos",
-    "wticgPerYear": "Trabalhos por edição",
-    "wticgTopAuthors": "Autores mais frequentes",
     "loadError": "Não foi possível carregar os dados do mapa.",
     "allStates": "Todos os estados",
     "allTopics": "Todos os temas",
@@ -406,20 +396,23 @@
     "groupSite": "site",
     "groupLeaderRole": "líder",
     "typeCnpqGroup": "Grupos CNPq",
+    "typeInct": "INCTs",
+    "inctStatus": "Situação",
+    "inctActive": "em andamento",
+    "inctPast": "encerrado (registro histórico)",
     "allLines": "Todas as linhas de pesquisa",
     "members": "Pesquisadores"
+  },
+  "inct": {
+    "eyebrow": "Institutos Nacionais de Ciência e Tecnologia · CNPq",
+    "h2": "INCTs em cibersegurança",
+    "intro": "Institutos Nacionais de Ciência e Tecnologia (INCTs) apoiados pelo CNPq com atuação em cibersegurança. A relação inclui os institutos em andamento e os já encerrados, preservados pelo valor histórico para a comunidade."
   },
   "cnpq": {
     "eyebrow": "Diretório dos Grupos de Pesquisa · CNPq",
     "h2": "Grupos de pesquisa CNPq e linhas de pesquisa",
     "intro": "Relação dos grupos de pesquisa do Diretório dos Grupos de Pesquisa no Brasil (DGP/CNPq) vinculados aos pesquisadores do mapa, com as respectivas linhas de pesquisa. Na página dedicada você encontra a nuvem de linhas de pesquisa e a busca por tema, instituição ou coordenador.",
     "cta": "Explorar os grupos de pesquisa CNPq →"
-  },
-  "wticg": {
-    "eyebrow": "SBSeg Estendido · Iniciação Científica",
-    "h2": "WTICG · Trabalhos de Iniciação Científica e de Graduação",
-    "intro": "Estatísticas das publicações no Workshop de Trabalhos de Iniciação Científica e de Graduação (WTICG), sub-evento dos Anais Estendidos do SBSeg. Cada trabalho é associado às instituições dos seus autores (extraídas do SOL/SBC); trabalhos com coautores de várias instituições aparecem em todas elas. No mapa acima, ative a camada WTICG para ver os trabalhos por instituição.",
-    "cta": "Ver os artigos dos Anais Estendidos →"
   },
   "mapForm": {
     "eyebrow": "Participe",

@@ -8,3 +8,5 @@ scripts/cybersecmap_raw/
 
 # WTICG scraped SOL pages (reproducible via scripts/fetch_wticg_pages.sh)
 scripts/wticg_cache/
+
+*.dat
